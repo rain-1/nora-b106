@@ -1,4 +1,4 @@
-# NORA-B106 breakout, revision A
+# NORA-B106 breakout, revision B
 
 A 36 x 36 mm, two-layer carrier for a **soldered NORA-B106-00B**. Order bare
 PCBs and assemble locally. This is a prototype design: the CAD checks pass,
@@ -33,7 +33,7 @@ assembly. It cannot be soldered to this board with an iron along its edges.
 
 ## Order settings for JLCPCB
 
-Upload `fabrication/nora-b106-breakout-revA-gerbers.zip` and use:
+Upload `fabrication/nora-b106-breakout-revB-gerbers.zip` and use:
 
 - 2 copper layers, FR4, **0.8 mm thickness**, 1 oz copper.
 - Green solder mask, white silkscreen; standard through-hole vias.
@@ -126,6 +126,15 @@ enumerate over USB; that alone is not a fault.
   Ground extends over 10 mm beyond the other three module sides. Keep metal,
   cables, and fingers away from the antenna during RF tests. The RF design
   still needs a real radio check after assembly.
+- Revision B routes SWCLK around the right side of the module and reserves
+  the antenna ground row against signal tracks. Ground vias at the empty K4
+  and K6 positions connect that row directly to the back plane. A separate
+  track keepout reserves the back copper under the module as ground; SWDIO,
+  RESET_N, and P1.13 now route outside it. There are 36 ground stitching vias,
+  with at least two in every separate piece of top-layer ground copper.
+- Supply tracks are 0.30 mm where clearance permits, with 0.18 mm sections
+  retained between closely spaced pads and tracks. The intended initial load
+  remains below about 100 mA.
 - The external low-frequency crystal pins are unused. Select the internal LF
   RC clock in firmware. The module provides its own high-frequency clock.
 - The regulator's 200 mA family rating is not a promise of 200 mA usable header
@@ -145,6 +154,7 @@ by itself. Do not regenerate over the routed PCB. Future direct edits should
 preserve the existing schematic UUIDs and PCB connectivity.
 
 The export script reruns schematic ERC and PCB DRC with schematic parity, then
+checks the module ground reference with `tools/check_module_ground.py`, then
 exports Gerbers and separate plated/non-plated drill files. All checks must
 pass before a new ZIP is made. Reports and source hashes are in
 `fabrication/reports/` and `fabrication/manifest.json`. These are static checks,

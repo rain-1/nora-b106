@@ -10,6 +10,9 @@ native-file or live IPC edits for board changes, preserving unrelated content.
 
 Use `make check` for ERC/DRC and `make fabrication` for the complete validation
 including schematic parity and bare-board exports. Save live edits first.
+Revision B reserves B.Cu beneath U1 for ground and protects the antenna ground
+row with a track keepout. `make ground-check` also checks signal clearances
+against the module body and requires two vias in every top ground island.
 The order settings are 2 layers, 36 x 36 mm, 0.8 mm FR4, 1 oz copper.
 There are SWD-only and USB population variants with different power wiring.
 No assembled hardware or Pico programming session has been physically tested.

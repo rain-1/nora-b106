@@ -1,4 +1,4 @@
-# Sources checked for revision A
+# Sources checked for revision B
 
 Retrieved 18 October 2026. Downloaded vendor PDFs and extracted text/images are
 local reference material, excluded from Git and the fabrication ZIP.
@@ -35,6 +35,13 @@ local reference material, excluded from Git and the fabrication ZIP.
 - OpenOCD nRF53 target implementation:
   https://github.com/openocd-org/openocd/blob/master/tcl/target/nordic/nrf53.cfg
   The included config falls back to the older target/nrf53.cfg location.
+  Revision B uses upstream source commit
+  `2893f940012e19cda8ccb6038766b0d77f26bd0e` for its local CMSIS-DAP build.
+  Offline parsing lists both application and network cores. This does not
+  establish successful communication with a physical Pico or NORA module.
+  Debian 13's stable package is OpenOCD 0.12.0, which lacks nRF53 support:
+  https://packages.debian.org/trixie/openocd
+  https://github.com/openocd-org/openocd/blob/2893f940012e19cda8ccb6038766b0d77f26bd0e/README.md
 - Nordic **nrfx v3.2.0 MDK nrf5340_application.h**:
   https://github.com/NordicSemiconductor/nrfx/blob/v3.2.0/mdk/nrf5340_application.h
   FICR INFO.DEVICEID 0x00FF0204; PART 0x00FF020C;

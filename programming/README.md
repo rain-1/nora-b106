@@ -17,10 +17,67 @@ Firmware and instructions:
 https://github.com/raspberrypi/debugprobe/releases/tag/debugprobe-v2.3.1
 https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html
 
-Install current OpenOCD with CMSIS-DAP and nRF53 support. On Debian the starting
-point is `sudo apt install openocd`. The config supports both the older
-`target/nrf53.cfg` and newer `target/nordic/nrf53.cfg` script paths. If neither
-exists, update OpenOCD; do not substitute `nrf52.cfg`.
+## OpenOCD version requirement
+
+**Debian 13's packaged OpenOCD 0.12.0 does not support the nRF5340. Installing
+`openocd` from its standard repositories is insufficient for these steps.**
+Use a newer OpenOCD binary and the scripts installed with that same build;
+copying just `nrf53.cfg` into an old installation is insufficient because the
+flash driver also needs nRF53 support. Do not substitute `nrf52.cfg`.
+
+One source-build route on Debian 13 is below. This pins the upstream source
+revision inspected for this project; it installs under the ignored `build/`
+directory and does not replace the system OpenOCD. From the project root:
+
+```sh
+sudo apt install build-essential git autoconf automake libtool pkg-config \
+  texinfo libusb-1.0-0-dev libhidapi-dev libjim-dev libssl-dev
+git clone https://github.com/openocd-org/openocd.git build/tools/openocd-src
+git -C build/tools/openocd-src checkout 2893f940012e19cda8ccb6038766b0d77f26bd0e
+(
+  cd build/tools/openocd-src
+  ./bootstrap
+  ./configure --prefix="$(pwd)/../openocd" \
+    --enable-cmsis-dap --enable-cmsis-dap-v2 --disable-werror
+  make -j2
+  make install
+)
+export PATH="$PWD/build/tools/openocd/bin:$PATH"
+openocd --version
+```
+
+For non-root USB access, install the upstream device rules once, then unplug
+and reconnect the Pico:
+
+```sh
+sudo install -m 644 build/tools/openocd-src/contrib/60-openocd.rules \
+  /etc/udev/rules.d/60-openocd.rules
+sudo udevadm control --reload-rules
+```
+
+If the source checkout already exists, skip `git clone`. Reapply the PATH line
+in each new terminal. Check the target configuration without connecting to
+hardware:
+
+```sh
+openocd -f programming/pico-nrf53.cfg -c 'noinit; echo [target names]; shutdown'
+```
+
+This should list `nrf53.cpuapp` and `nrf53.cpunet`. It proves that the installed
+binary can parse the target/flash-driver configuration, not that a Pico can
+program a physical module. The project config accepts both the older
+`target/nrf53.cfg` and newer `target/nordic/nrf53.cfg` script locations.
+Upstream [build instructions](https://github.com/openocd-org/openocd/blob/2893f940012e19cda8ccb6038766b0d77f26bd0e/README.md)
+and the [Debian 13 package version](https://packages.debian.org/trixie/openocd)
+document the two installation routes. SEGGER J-Link remains the manufacturer's
+supported alternative.
+
+In this workspace, that pinned OpenOCD revision has also been built locally at
+`build/tools/openocd/bin/openocd`, with build dependencies extracted under
+`build/tools/openocd-deps/` rather than installed system-wide. The offline
+configuration check passed for both cores. These ignored local binaries are
+not included in Git or the project ZIP; use the build recipe on a fresh
+checkout. No USB adapter or target was connected during this check.
 
 ## Wire the target
 
@@ -112,3 +169,14 @@ This last command **does program flash**. Do not use RP2040 UF2 application
 binaries on the NORA module, or assume J-Link-only `nrfjprog` works through a
 Pico. The Pico's USB port is the debugger connection; the carrier's USB-C
 connector is the target's separate native USB peripheral.
+
+## Native USB firmware updates
+
+The USB hardware does not provide flashing by itself. A USB-capable bootloader
+must first be configured and programmed through SWD, and applications must use
+its flash layout. MCUboot's USB CDC ACM serial recovery is one option. Its
+`CONFIG_BOOT_SERIAL_PIN_RESET` option can make the existing RESET button select
+recovery, without a second button or GPIO jumper. This bootloader configuration
+has not yet been built or tested for this carrier; `firmware/blinky/` does not
+include it. Keep SWD available for debugging and bootloader recovery.
+See [Nordic's serial recovery documentation](https://nrfconnectdocs.nordicsemi.com/ncs/latest/nrf/app_dev/bootloaders_dfu/mcuboot_serial_recovery.html).

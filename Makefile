@@ -5,7 +5,7 @@ KICAD_CLI ?= kicad-cli
 PYTHON ?= /usr/bin/python3
 IPC_PYTHON ?= .venv/bin/python
 
-.PHONY: help doctor ipc-status erc drc check schematic-svg pcb-svg preview fabrication
+.PHONY: help doctor ipc-status erc drc ground-check check schematic-svg pcb-svg preview fabrication
 
 help:
 	@printf '%s\n' 'make doctor         Check KiCad, Python board API, and libraries' 'make ipc-status     Inspect the PCB open in KiCad via the live API' 'make check          Run schematic ERC and board DRC' 'make fabrication    Validate parity and regenerate the JLCPCB Gerber ZIP' 'make preview        Export schematic and board SVGs to build/' 'Override PROJECT, SCHEMATIC, or BOARD for other file names.'
@@ -26,7 +26,10 @@ drc:
 	mkdir -p build/reports
 	$(KICAD_CLI) pcb drc --exit-code-violations --format json --output build/reports/drc.json "$(BOARD)"
 
-check: erc drc
+ground-check:
+	$(PYTHON) tools/check_module_ground.py
+
+check: erc drc ground-check
 
 schematic-svg:
 	@test -f "$(SCHEMATIC)" || { printf 'Missing schematic: %s\n' "$(SCHEMATIC)"; exit 1; }
