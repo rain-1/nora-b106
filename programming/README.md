@@ -97,8 +97,8 @@ Pico 3V3 OUT disconnected. Both variants use 3.3 V signalling. Do not connect
 Pico VBUS/VSYS to this 3.3 V header. The Pico firmware has no target voltage
 measurement, so verify the rail with a multimeter before connecting signals.
 
-For UART later: J3 pin 3 (target P1.12 TX) goes to Pico GP5 (RX, physical 7),
-and J3 pin 4 (target P1.13 RX) goes to Pico GP4 (TX, physical 6). Your firmware
+For UART later: J3 pin 9 (target P1.12 TX) goes to Pico GP5 (RX, physical 7),
+and J3 pin 10 (target P1.13 RX) goes to Pico GP4 (TX, physical 6). Your firmware
 must first configure these target pins as UART.
 
 ## Read-only identification

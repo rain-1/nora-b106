@@ -1,4 +1,4 @@
-# Sources checked for revision C
+# Sources checked for revision D
 
 Retrieved 18 October 2026. Downloaded vendor PDFs and extracted text/images are
 local reference material, excluded from Git and the fabrication ZIP.
@@ -35,7 +35,7 @@ local reference material, excluded from Git and the fabrication ZIP.
 - OpenOCD nRF53 target implementation:
   https://github.com/openocd-org/openocd/blob/master/tcl/target/nordic/nrf53.cfg
   The included config falls back to the older target/nrf53.cfg location.
-  Revision C uses upstream source commit
+  Revision D uses upstream source commit
   `2893f940012e19cda8ccb6038766b0d77f26bd0e` for its local CMSIS-DAP build.
   Offline parsing lists both application and network cores. This does not
   establish successful communication with a physical Pico or NORA module.

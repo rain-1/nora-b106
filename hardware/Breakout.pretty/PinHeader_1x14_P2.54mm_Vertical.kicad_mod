@@ -1,9 +1,9 @@
-(footprint "PinHeader_1x04_P2.54mm_Vertical"
+(footprint "PinHeader_1x14_P2.54mm_Vertical"
 	(version 20241229)
 	(generator "kicad-footprint-generator")
 	(layer "F.Cu")
-	(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
-	(tags "Through hole pin header THT 1x04 2.54mm single row")
+	(descr "Through hole straight pin header, 1x14, 2.54mm pitch, single row")
+	(tags "Through hole pin header THT 1x14 2.54mm single row")
 	(property "Reference" "REF**"
 		(at 0 -2.38 0)
 		(layer "F.SilkS")
@@ -14,8 +14,8 @@
 			)
 		)
 	)
-	(property "Value" "PinHeader_1x04_P2.54mm_Vertical"
-		(at 0 10 0)
+	(property "Value" "PinHeader_1x14_P2.54mm_Vertical"
+		(at 0 35.4 0)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -45,7 +45,7 @@
 	)
 	(fp_line
 		(start -1.38 1.27)
-		(end -1.38 9)
+		(end -1.38 34.4)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -62,8 +62,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -1.38 9)
-		(end 1.38 9)
+		(start -1.38 34.4)
+		(end 1.38 34.4)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -72,7 +72,7 @@
 	)
 	(fp_line
 		(start 1.38 1.27)
-		(end 1.38 9)
+		(end 1.38 34.4)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -80,8 +80,8 @@
 		(layer "F.SilkS")
 	)
 	(fp_line
-		(start -1.77 -1.77)
-		(end -1.77 9.39)
+		(start -1.77 -1.78)
+		(end -1.77 34.8)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -89,8 +89,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start -1.77 9.39)
-		(end 1.77 9.39)
+		(start -1.77 34.8)
+		(end 1.77 34.8)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -98,8 +98,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start 1.77 -1.77)
-		(end -1.77 -1.77)
+		(start 1.77 -1.78)
+		(end -1.77 -1.78)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -107,8 +107,8 @@
 		(layer "F.CrtYd")
 	)
 	(fp_line
-		(start 1.77 9.39)
-		(end 1.77 -1.77)
+		(start 1.77 34.8)
+		(end 1.77 -1.78)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -125,7 +125,7 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start -1.27 8.89)
+		(start -1.27 34.29)
 		(end -1.27 -0.635)
 		(stroke
 			(width 0.1)
@@ -144,7 +144,7 @@
 	)
 	(fp_line
 		(start 1.27 -1.27)
-		(end 1.27 8.89)
+		(end 1.27 34.29)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -152,8 +152,8 @@
 		(layer "F.Fab")
 	)
 	(fp_line
-		(start 1.27 8.89)
-		(end -1.27 8.89)
+		(start 1.27 34.29)
+		(end -1.27 34.29)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -161,7 +161,7 @@
 		(layer "F.Fab")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 3.81 90)
+		(at 0 16.51 90)
 		(layer "F.Fab")
 		(effects
 			(font
@@ -198,8 +198,78 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 	)
+	(pad "5" thru_hole circle
+		(at 0 10.16)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "6" thru_hole circle
+		(at 0 12.7)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "7" thru_hole circle
+		(at 0 15.24)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "8" thru_hole circle
+		(at 0 17.78)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "9" thru_hole circle
+		(at 0 20.32)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "10" thru_hole circle
+		(at 0 22.86)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "11" thru_hole circle
+		(at 0 25.4)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "12" thru_hole circle
+		(at 0 27.94)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "13" thru_hole circle
+		(at 0 30.48)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
+	(pad "14" thru_hole circle
+		(at 0 33.02)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+	)
 	(embedded_fonts no)
-	(model "${KICAD9_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.step"
+	(model "${KICAD9_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x14_P2.54mm_Vertical.step"
 		(offset
 			(xyz 0 0 0)
 		)

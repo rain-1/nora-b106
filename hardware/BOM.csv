@@ -4,9 +4,7 @@ U2,1,XC6206P332MR-G,SOT-23-3,DNP,Fit,"Torex XC6206P332MR-G, SOT-23: 1 GND / 2 OU
 U3,1,USBLC6-2SC6,SOT-23-6,DNP,Fit,"ST USBLC6-2SC6, SOT-23-6 (not USBLC6-2P6)"
 J1,1,TYPE-C-31-M-12,USB_C_Receptacle_HRO_TYPE-C-31-M-12,DNP,Fit,"Exact HRO TYPE-C-31-M-12, not a generic USB-C connector"
 J2,1,SWD / PICO,PinHeader_1x05_P2.54mm_Vertical,Fit,Fit,"1x5 2.54 mm straight pin header, or direct wires"
-J3,1,GPIO 3V3,PinHeader_1x08_P2.54mm_Vertical,Optional,Optional,1x8 2.54 mm straight pin header
-J4,1,EXTRA GPIO,PinHeader_1x04_P2.54mm_Vertical,Optional,Optional,"1x4 2.54 mm straight pin header; four GPIOs only, power/GND on J2 or J3"
-J5,1,EXTRA GPIO,PinHeader_1x02_P2.54mm_Vertical,Optional,Optional,"1x2 2.54 mm straight pin header; two GPIOs only, power/GND on J2 or J3"
+J3,1,GPIO / 3V3,PinHeader_1x14_P2.54mm_Vertical,Optional,Optional,"1x14 2.54 mm straight pin header, 2.54 mm-wide body; twelve GPIOs plus 3V3/GND"
 R1,1,5k1/1%,R_0805_2012Metric,DNP,Fit,"5.1 kohm, 1%, 0805"
 R2,1,5k1/1%,R_0805_2012Metric,DNP,Fit,"5.1 kohm, 1%, 0805"
 R3,1,1k,R_0805_2012Metric,Optional,Optional,"1 kohm, 0805; fit with D1"
