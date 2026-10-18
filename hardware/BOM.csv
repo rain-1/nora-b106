@@ -1,0 +1,16 @@
+Reference,Quantity,Value,Footprint,SWD-only build,USB build,Purchasing / assembly notes
+U1,1,NORA-B106-00B,NORA-B106,Fit,Fit,"u-blox NORA-B106-00B, 82-pad LGA; antenna faces top board edge"
+U2,1,XC6206P332MR-G,SOT-23-3,DNP,Fit,"Torex XC6206P332MR-G, SOT-23: 1 GND / 2 OUT / 3 IN"
+U3,1,USBLC6-2SC6,SOT-23-6,DNP,Fit,"ST USBLC6-2SC6, SOT-23-6 (not USBLC6-2P6)"
+J1,1,TYPE-C-31-M-12,USB_C_Receptacle_HRO_TYPE-C-31-M-12,DNP,Fit,"Exact HRO TYPE-C-31-M-12, not a generic USB-C connector"
+J2,1,SWD / PICO,PinHeader_1x05_P2.54mm_Vertical,Fit,Fit,"1x5 2.54 mm straight pin header, or direct wires"
+J3,1,GPIO 3V3,PinHeader_1x08_P2.54mm_Vertical,Optional,Optional,1x8 2.54 mm straight pin header
+R1,1,5k1/1%,R_0805_2012Metric,DNP,Fit,"5.1 kohm, 1%, 0805"
+R2,1,5k1/1%,R_0805_2012Metric,DNP,Fit,"5.1 kohm, 1%, 0805"
+R3,1,1k,R_0805_2012Metric,Optional,Optional,"1 kohm, 0805; fit with D1"
+D1,1,GREEN,LED_0805_2012Metric,Optional,Optional,"Green 0805 LED; pad 1=cathode, pad 2=anode"
+C1,1,1u/16V,C_0805_2012Metric,DNP,Fit,"1 uF, >=16 V, X7R, 0805"
+C2,1,4u7/10V,C_0805_2012Metric,Fit,Fit,"4.7 uF, >=10 V, X7R, 0805"
+C3,1,100n/16V,C_0805_2012Metric,Fit,Fit,"100 nF, >=16 V, X7R, 0805"
+C4,1,100n/16V,C_0805_2012Metric,DNP,Fit,"100 nF, >=16 V, X7R, 0805"
+SW1,1,RESET,SW_PUSH_6mm,Optional,Optional,"6 mm tactile, 6.5 x 4.5 mm pin spacing"

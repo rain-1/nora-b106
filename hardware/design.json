@@ -1,0 +1,363 @@
+{
+  "module_pin_names": {
+    "A1": "GND",
+    "A2": "P0.12",
+    "A3": "P1.03",
+    "A4": "P1.00",
+    "A5": "P0.20",
+    "A6": "NC",
+    "A7": "VDD",
+    "A8": "VDDH",
+    "A9": "GND",
+    "B1": "P0.08",
+    "B2": "GND",
+    "B3": "P0.11",
+    "B4": "P1.02",
+    "B5": "P0.03",
+    "B6": "P0.01",
+    "B7": "VDD",
+    "B8": "GND",
+    "B9": "VBUS",
+    "C1": "P0.10",
+    "C2": "P0.09",
+    "C4": "P1.01",
+    "C5": "P0.02",
+    "C6": "P0.00",
+    "C8": "P0.22",
+    "C9": "USB_DP",
+    "D1": "P0.15",
+    "D2": "P0.13",
+    "D3": "P0.07",
+    "D7": "P0.23",
+    "D8": "P0.04",
+    "D9": "USB_DM",
+    "E1": "P0.18",
+    "E2": "P0.14",
+    "E3": "P0.21",
+    "E4": "GND",
+    "E5": "GND",
+    "E7": "P0.06",
+    "E8": "P0.05",
+    "E9": "P1.05",
+    "F1": "P0.17",
+    "F2": "P0.16",
+    "F3": "P0.19",
+    "F4": "GND",
+    "F5": "GND",
+    "F7": "P1.07",
+    "F8": "P1.14",
+    "F9": "P1.15",
+    "G1": "P1.06",
+    "G2": "P0.26",
+    "G3": "P0.25",
+    "G4": "P1.04",
+    "G5": "P1.08",
+    "G7": "P1.09",
+    "G8": "P1.12",
+    "G9": "P1.13",
+    "H1": "P0.24",
+    "H2": "SWDIO",
+    "H3": "P0.27",
+    "H7": "P0.29",
+    "H8": "P0.30",
+    "H9": "P1.11",
+    "J1": "NC",
+    "J2": "SWCLK",
+    "J3": "RESET_N",
+    "J4": "NC",
+    "J5": "NC",
+    "J7": "P1.10",
+    "J8": "P0.28",
+    "J9": "P0.31",
+    "K1": "NC",
+    "K2": "GND",
+    "K3": "GND",
+    "K5": "GND",
+    "K7": "GND",
+    "K8": "GND",
+    "K9": "ANT_NC",
+    "L1": "GND",
+    "L9": "GND",
+    "M1": "GND",
+    "M2": "GND",
+    "M8": "GND",
+    "M9": "GND"
+  },
+  "parts": [
+    {
+      "reference": "U1",
+      "value": "NORA-B106-00B",
+      "footprint": "NORA-B106",
+      "nets": {
+        "A1": "GND",
+        "A9": "GND",
+        "B2": "GND",
+        "B8": "GND",
+        "E4": "GND",
+        "E5": "GND",
+        "F4": "GND",
+        "F5": "GND",
+        "K2": "GND",
+        "K3": "GND",
+        "K5": "GND",
+        "K7": "GND",
+        "K8": "GND",
+        "L1": "GND",
+        "L9": "GND",
+        "M1": "GND",
+        "M2": "GND",
+        "M8": "GND",
+        "M9": "GND",
+        "A7": "+3V3",
+        "B7": "+3V3",
+        "A8": "+3V3",
+        "B9": "VBUS",
+        "H2": "SWDIO",
+        "J2": "SWCLK",
+        "J3": "RESET_N",
+        "C9": "USB_DP",
+        "D9": "USB_DM",
+        "A5": "LED",
+        "D8": "P0.04_AIN0",
+        "E8": "P0.05_AIN1",
+        "B4": "P1.02_SDA",
+        "A3": "P1.03_SCL",
+        "G8": "P1.12_TX",
+        "G9": "P1.13_RX"
+      },
+      "pcb_position": [
+        118,
+        108.2,
+        90
+      ]
+    },
+    {
+      "reference": "U2",
+      "value": "XC6206P332MR-G",
+      "footprint": "SOT-23-3",
+      "nets": {
+        "1": "GND",
+        "2": "+3V3",
+        "3": "VBUS"
+      },
+      "pcb_position": [
+        121,
+        121,
+        180
+      ]
+    },
+    {
+      "reference": "U3",
+      "value": "USBLC6-2SC6",
+      "footprint": "SOT-23-6",
+      "nets": {
+        "1": "USB_DM",
+        "2": "GND",
+        "3": "USB_DP",
+        "4": "USB_DP",
+        "5": "VBUS",
+        "6": "USB_DM"
+      },
+      "pcb_position": [
+        111.275,
+        124.5,
+        90
+      ]
+    },
+    {
+      "reference": "J1",
+      "value": "TYPE-C-31-M-12",
+      "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+      "nets": {
+        "A1": "GND",
+        "B12": "GND",
+        "A12": "GND",
+        "B1": "GND",
+        "A4": "VBUS",
+        "B9": "VBUS",
+        "A9": "VBUS",
+        "B4": "VBUS",
+        "A5": "CC1",
+        "B5": "CC2",
+        "A6": "USB_DP",
+        "B6": "USB_DP",
+        "A7": "USB_DM",
+        "B7": "USB_DM",
+        "S1": "GND"
+      },
+      "pcb_position": [
+        113.6,
+        132.5,
+        0
+      ]
+    },
+    {
+      "reference": "J2",
+      "value": "SWD / PICO",
+      "footprint": "PinHeader_1x05_P2.54mm_Vertical",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND",
+        "3": "SWCLK",
+        "4": "SWDIO",
+        "5": "RESET_N"
+      },
+      "pcb_position": [
+        103,
+        116,
+        0
+      ]
+    },
+    {
+      "reference": "J3",
+      "value": "GPIO 3V3",
+      "footprint": "PinHeader_1x08_P2.54mm_Vertical",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND",
+        "3": "P1.12_TX",
+        "4": "P1.13_RX",
+        "5": "P0.04_AIN0",
+        "6": "P0.05_AIN1",
+        "7": "P1.02_SDA",
+        "8": "P1.03_SCL"
+      },
+      "pcb_position": [
+        133,
+        113,
+        0
+      ]
+    },
+    {
+      "reference": "R1",
+      "value": "5k1/1%",
+      "footprint": "R_0805_2012Metric",
+      "nets": {
+        "1": "CC1",
+        "2": "GND"
+      },
+      "pcb_position": [
+        108.4,
+        124.5,
+        90
+      ]
+    },
+    {
+      "reference": "R2",
+      "value": "5k1/1%",
+      "footprint": "R_0805_2012Metric",
+      "nets": {
+        "1": "CC2",
+        "2": "GND"
+      },
+      "pcb_position": [
+        118.5,
+        124.5,
+        90
+      ]
+    },
+    {
+      "reference": "R3",
+      "value": "1k",
+      "footprint": "R_0805_2012Metric",
+      "nets": {
+        "1": "LED",
+        "2": "LED_A"
+      },
+      "pcb_position": [
+        126.5,
+        121.5,
+        90
+      ]
+    },
+    {
+      "reference": "D1",
+      "value": "GREEN",
+      "footprint": "LED_0805_2012Metric",
+      "nets": {
+        "1": "GND",
+        "2": "LED_A"
+      },
+      "pcb_position": [
+        126.5,
+        117.5,
+        90
+      ]
+    },
+    {
+      "reference": "C1",
+      "value": "1u/16V",
+      "footprint": "C_0805_2012Metric",
+      "nets": {
+        "1": "VBUS",
+        "2": "GND"
+      },
+      "pcb_position": [
+        123,
+        125,
+        0
+      ]
+    },
+    {
+      "reference": "C2",
+      "value": "4u7/10V",
+      "footprint": "C_0805_2012Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "pcb_position": [
+        121,
+        117.5,
+        0
+      ]
+    },
+    {
+      "reference": "C3",
+      "value": "100n/16V",
+      "footprint": "C_0805_2012Metric",
+      "nets": {
+        "1": "+3V3",
+        "2": "GND"
+      },
+      "pcb_position": [
+        113,
+        117,
+        90
+      ]
+    },
+    {
+      "reference": "C4",
+      "value": "100n/16V",
+      "footprint": "C_0805_2012Metric",
+      "nets": {
+        "1": "VBUS",
+        "2": "GND"
+      },
+      "pcb_position": [
+        116.5,
+        117.5,
+        90
+      ]
+    },
+    {
+      "reference": "SW1",
+      "value": "RESET",
+      "footprint": "SW_PUSH_6mm",
+      "nets": {
+        "1": "RESET_N",
+        "2": "GND"
+      },
+      "pcb_position": [
+        121.5,
+        129,
+        0
+      ]
+    }
+  ],
+  "board_mm": [
+    36,
+    36
+  ],
+  "thickness_mm": 0.8
+}

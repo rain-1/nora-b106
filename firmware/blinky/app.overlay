@@ -1,0 +1,6 @@
+#include <zephyr/dt-bindings/gpio/gpio.h>
+/* Use the nRF5340 DK SoC/memory configuration; replace only its LED pin. */
+&led0 {
+    gpios = <&gpio0 20 GPIO_ACTIVE_HIGH>;
+    label = "NORA breakout test LED";
+};

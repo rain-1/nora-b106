@@ -1,0 +1,6 @@
+# Official IPC bindings; API version 9.0.3, tested with Debian's KiCad 9.0.2.
+kicad-python==0.4.0
+
+# CAD generation and preview helpers (pcbnew comes from Debian).
+sexpdata==1.0.2
+cairosvg==2.9.1

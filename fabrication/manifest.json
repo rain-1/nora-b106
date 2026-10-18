@@ -1,0 +1,19 @@
+{
+  "revision": "A",
+  "board_mm": [
+    36,
+    36
+  ],
+  "thickness_mm": 0.8,
+  "copper_layers": 2,
+  "copper_oz": 1,
+  "assembly": "self assembly; see hardware/README.md for SWD-only and USB variants",
+  "status": "CAD checks passed; physical prototype not yet tested",
+  "sha256": {
+    "nora-b106-board.kicad_pcb": "12c7caced4732160fbe852a0a9b26dd277c663f97a5e24a23f746fa3af649f00",
+    "nora-b106-board.kicad_sch": "6b4ed8938b8d893b74744e784f6df752032eca80b1f80a6dc4d5321f297adef3",
+    "nora-b106-board.kicad_pro": "aef492d1639790c9d797d801ccf68326300f718eeefe39c9a21b21cf3c65eb39",
+    "hardware/BOM.csv": "88b246bfb9ec8fe2639997a11f7c25ddaef331439aad857f4818808fbc6713d4"
+  },
+  "gerber_zip_sha256": "b4974e50455930e2a00d0e75c26530783a15d2bd4df8b9288d0de4cffdaf7d1b"
+}

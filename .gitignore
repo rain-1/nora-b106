@@ -1,0 +1,16 @@
+/build/
+/.venv/
+__pycache__/
+*.pyc
+*.kicad_prl
+*.lck
+~*.kicad_*
+*-backups/
+_autosave-*
+fp-info-cache
+
+/logs/
+/reference/*.pdf
+/reference/*.txt
+/reference/*.png
+/reference/*.h
