@@ -13,6 +13,8 @@ including schematic parity and bare-board exports. Save live edits first.
 Revision B reserves B.Cu beneath U1 for ground and protects the antenna ground
 row with a track keepout. `make ground-check` also checks signal clearances
 against the module body and requires two vias in every top ground island.
+Revision C retains those constraints and adds six GPIOs on optional J4/J5:
+P0.31, P1.11, P1.15, P1.05, P0.18, P0.15. J2/J3 pinouts remain unchanged.
 The order settings are 2 layers, 36 x 36 mm, 0.8 mm FR4, 1 oz copper.
 There are SWD-only and USB population variants with different power wiring.
 No assembled hardware or Pico programming session has been physically tested.

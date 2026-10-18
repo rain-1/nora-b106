@@ -123,7 +123,13 @@
         "B4": "P1.02_SDA",
         "A3": "P1.03_SCL",
         "G8": "P1.12_TX",
-        "G9": "P1.13_RX"
+        "G9": "P1.13_RX",
+        "J9": "P0.31",
+        "H9": "P1.11",
+        "F9": "P1.15",
+        "E9": "P1.05",
+        "E1": "P0.18",
+        "D1": "P0.15"
       },
       "pcb_position": [
         118,
@@ -225,6 +231,36 @@
       "pcb_position": [
         133,
         113,
+        0
+      ]
+    },
+    {
+      "reference": "J4",
+      "value": "EXTRA GPIO",
+      "footprint": "PinHeader_1x04_P2.54mm_Vertical",
+      "nets": {
+        "1": "P0.31",
+        "2": "P1.11",
+        "3": "P1.15",
+        "4": "P1.05"
+      },
+      "pcb_position": [
+        106.7,
+        113.35,
+        0
+      ]
+    },
+    {
+      "reference": "J5",
+      "value": "EXTRA GPIO",
+      "footprint": "PinHeader_1x02_P2.54mm_Vertical",
+      "nets": {
+        "1": "P0.18",
+        "2": "P0.15"
+      },
+      "pcb_position": [
+        134.4,
+        106.7,
         0
       ]
     },

@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "9.0.2+dfsg-1"
     },
-    "CreationDate": "2026-10-18T18:35:47+01:00"
+    "CreationDate": "2026-10-18T19:17:16+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "nora-b106-board",
       "GUID": "6e6f7261-2d62-4313-9036-2d626f617264",
-      "Revision": "B"
+      "Revision": "C"
     },
     "Size": {
       "X": 36.05,

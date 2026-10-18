@@ -1,12 +1,12 @@
 %TF.GenerationSoftware,KiCad,Pcbnew,9.0.2+dfsg-1*%
-%TF.CreationDate,2026-10-18T18:35:47+01:00*%
-%TF.ProjectId,nora-b106-board,6e6f7261-2d62-4313-9036-2d626f617264,B*%
+%TF.CreationDate,2026-10-18T19:17:16+01:00*%
+%TF.ProjectId,nora-b106-board,6e6f7261-2d62-4313-9036-2d626f617264,C*%
 %TF.SameCoordinates,Original*%
 %TF.FileFunction,Paste,Top*%
 %TF.FilePolarity,Positive*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 9.0.2+dfsg-1) date 2026-10-18 18:35:47*
+G04 Created by KiCad (PCBNEW 9.0.2+dfsg-1) date 2026-10-18 19:17:16*
 %MOMM*%
 %LPD*%
 G01*

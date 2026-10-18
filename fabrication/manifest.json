@@ -1,5 +1,5 @@
 {
-  "revision": "B",
+  "revision": "C",
   "board_mm": [
     36,
     36
@@ -10,10 +10,10 @@
   "assembly": "self assembly; see hardware/README.md for SWD-only and USB variants",
   "status": "CAD checks passed; physical prototype not yet tested",
   "sha256": {
-    "nora-b106-board.kicad_pcb": "5c275087db242574a3407c19ab7e52d21807a92cb6743c4f588a306d2e857b2c",
-    "nora-b106-board.kicad_sch": "27a9cf54dace6162e19152e7a85b02c083a1c46f06a20c5cd29240fc44380cab",
+    "nora-b106-board.kicad_pcb": "2e5571cb823e8ac8b1604be08eed36e77e917269b41f8935151f19bd886afa07",
+    "nora-b106-board.kicad_sch": "3737df0ee616261dbaf62feb320388de30b02d4a44366d256087014e683ea169",
     "nora-b106-board.kicad_pro": "87e73756a19bffeeee10ea9992b6bd0e600c9ede5675a8136eea5cb6d612833e",
-    "hardware/BOM.csv": "88b246bfb9ec8fe2639997a11f7c25ddaef331439aad857f4818808fbc6713d4"
+    "hardware/BOM.csv": "c000358b2859cc859770c3f4d5f22745da0bd976fffc58366932beb543fbde8f"
   },
-  "gerber_zip_sha256": "117cfa9832d91c5cb468e57484510c80d38339d0047b00ef23be2efca24e85cf"
+  "gerber_zip_sha256": "5d4c3f1f179d21152ba61b4965a47eca03f63840778e970f971f2022738f4acc"
 }

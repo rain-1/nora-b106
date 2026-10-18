@@ -1,4 +1,4 @@
-# NORA-B106 breakout, revision B
+# NORA-B106 breakout, revision C
 
 A 36 x 36 mm, two-layer carrier for a **soldered NORA-B106-00B**. Order bare
 PCBs and assemble locally. This is a prototype design: the CAD checks pass,
@@ -13,6 +13,8 @@ been tested yet. It is not a reusable socket fixture for testing loose modules.
 | C2 4.7 uF / 10 V X7R; C3 100 nF / 16 V X7R | Fit | Fit |
 | J2, 1x5 SWD header | Fit, or solder wires | Fit, or solder wires |
 | J3, 1x8 GPIO header | Optional | Optional |
+| J4, 1x4 extra GPIO header | Optional | Optional |
+| J5, 1x2 extra GPIO header | Optional | Optional |
 | D1 green LED and R3 1 kohm | Recommended for testing | Recommended for testing |
 | SW1 reset switch | Optional | Optional |
 | J1 USB-C; U2 regulator; U3 ESD; R1/R2 5.1 kohm; C1 1 uF; C4 100 nF | **Omit all** | **Fit all** |
@@ -33,7 +35,7 @@ assembly. It cannot be soldered to this board with an iron along its edges.
 
 ## Order settings for JLCPCB
 
-Upload `fabrication/nora-b106-breakout-revB-gerbers.zip` and use:
+Upload `fabrication/nora-b106-breakout-revC-gerbers.zip` and use:
 
 - 2 copper layers, FR4, **0.8 mm thickness**, 1 oz copper.
 - Green solder mask, white silkscreen; standard through-hole vias.
@@ -76,6 +78,28 @@ are shown from the component side in the assembly image.
 | 6 | P0.05 / AIN1 | E8 |
 | 7 | P1.02, suggested I2C SDA | B4 |
 | 8 | P1.03, suggested I2C SCL | A3 |
+
+Revision C adds six more GPIOs on J4/J5, bringing the total to twelve. J2/J3
+pinouts are unchanged. Pin 1 is the square pad, at the top when viewing the board
+with the antenna at the top and USB connector at the bottom.
+
+| J4 pin | Signal | Module pad |
+|---|---|---|
+| 1 | P0.31 | J9 |
+| 2 | P1.11 | H9 |
+| 3 | P1.15 | F9 |
+| 4 | P1.05 | E9 |
+
+| J5 pin | Signal | Module pad |
+|---|---|---|
+| 1 | P0.18 | E1 |
+| 2 | P0.15 | D1 |
+
+J4/J5 carry GPIO signals only; take 3.3 V and ground from J2 or J3. These six
+pins are general digital GPIOs, without external pull-ups, LEDs, or other loads.
+The extra headers are optional and add no required parts to either assembly
+variant. Fit them or solder wires to their holes when needed. J5 is close to
+the right board edge; use a standard 2.54 mm pin header with a 2.54 mm-wide body.
 
 The UART/I2C roles are firmware choices, not fixed connections. I2C pull-ups
 must be added externally when needed. GPIO is **3.3 V only, not 5 V tolerant**.
@@ -126,11 +150,12 @@ enumerate over USB; that alone is not a fault.
   Ground extends over 10 mm beyond the other three module sides. Keep metal,
   cables, and fingers away from the antenna during RF tests. The RF design
   still needs a real radio check after assembly.
-- Revision B routes SWCLK around the right side of the module and reserves
+- Revision C retains the revision B routing of SWCLK around the right side of
+  the module and reserves
   the antenna ground row against signal tracks. Ground vias at the empty K4
   and K6 positions connect that row directly to the back plane. A separate
   track keepout reserves the back copper under the module as ground; SWDIO,
-  RESET_N, and P1.13 now route outside it. There are 36 ground stitching vias,
+  RESET_N, and P1.13 route outside it. There are 35 ground stitching vias,
   with at least two in every separate piece of top-layer ground copper.
 - Supply tracks are 0.30 mm where clearance permits, with 0.18 mm sections
   retained between closely spaced pads and tracks. The intended initial load

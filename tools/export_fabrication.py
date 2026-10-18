@@ -20,10 +20,10 @@ for old in GERBERS.iterdir():
     if old.is_file():old.unlink()
 run('kicad-cli','pcb','export','gerbers','--layers','F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts','--subtract-soldermask','-o',str(GERBERS)+'/', 'nora-b106-board.kicad_pcb')
 run('kicad-cli','pcb','export','drill','--format','excellon','--excellon-separate-th','--excellon-units','mm','-o',str(GERBERS)+'/', 'nora-b106-board.kicad_pcb')
-zip_path=OUT/'nora-b106-breakout-revB-gerbers.zip'
+zip_path=OUT/'nora-b106-breakout-revC-gerbers.zip'
 with zipfile.ZipFile(zip_path,'w',zipfile.ZIP_DEFLATED) as archive:
     for path in sorted(GERBERS.iterdir()):archive.write(path,path.name)
 files=['nora-b106-board.kicad_pcb','nora-b106-board.kicad_sch','nora-b106-board.kicad_pro','hardware/BOM.csv']
-manifest={'revision':'B','board_mm':[36,36],'thickness_mm':0.8,'copper_layers':2,'copper_oz':1,'assembly':'self assembly; see hardware/README.md for SWD-only and USB variants','status':'CAD checks passed; physical prototype not yet tested','sha256':{file:hashlib.sha256((ROOT/file).read_bytes()).hexdigest() for file in files},'gerber_zip_sha256':hashlib.sha256(zip_path.read_bytes()).hexdigest()}
+manifest={'revision':'C','board_mm':[36,36],'thickness_mm':0.8,'copper_layers':2,'copper_oz':1,'assembly':'self assembly; see hardware/README.md for SWD-only and USB variants','status':'CAD checks passed; physical prototype not yet tested','sha256':{file:hashlib.sha256((ROOT/file).read_bytes()).hexdigest() for file in files},'gerber_zip_sha256':hashlib.sha256(zip_path.read_bytes()).hexdigest()}
 (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print('Bare-PCB package:',zip_path)

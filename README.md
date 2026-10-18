@@ -1,20 +1,20 @@
 # NORA-B106 board workspace
 
-Revision B is a 36 x 36 mm two-layer NORA-B106 breakout for self assembly.
-It exposes SWD, six GPIOs, optional USB-C power/data, an LED, and reset.
+Revision C is a 36 x 36 mm two-layer NORA-B106 breakout for self assembly.
+It exposes SWD, twelve GPIOs, optional USB-C power/data, an LED, and reset.
 
 - [Assembly options, pinouts, and JLCPCB settings](hardware/README.md)
 - [Pico programmer wiring and first tests](programming/README.md)
 - [Parts list with SWD-only / USB population choices](hardware/BOM.csv)
-- [Bare-PCB Gerber ZIP](fabrication/nora-b106-breakout-revB-gerbers.zip)
+- [Bare-PCB Gerber ZIP](fabrication/nora-b106-breakout-revC-gerbers.zip)
 - [Assembly drawing](fabrication/preview/assembly-top.png)
 - [Schematic preview](fabrication/preview/nora-b106-board.png)
 
 CAD validation passed with zero ERC, DRC, unconnected-item, or schematic-parity
 issues. The hardware and programmer connection have not been physically tested.
-Revision B improves the module ground plane, reroutes SWD signals around it,
-and adds ground stitching. Use the revision B Gerbers; revision A is retained
-only in Git history. Debian 13's packaged OpenOCD is too old for the Pico route;
+Revision C adds six GPIOs on optional J4/J5 while retaining revision B's module
+ground-plane improvements. Use the revision C Gerbers; earlier revisions are
+retained in Git history. Debian 13's packaged OpenOCD is too old for the Pico route;
 the programming guide provides a newer source build and an offline check.
 For the lowest part count, start with the SWD-only population and power it from
 a Pico's 3V3 OUT, following the wiring guide. The USB population uses its own
