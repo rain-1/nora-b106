@@ -52,3 +52,7 @@ USB-C uses the same checked HRO TYPE-C-31-M-12 land pattern as revision D:
 The USB-C land/pad geometry is independently audited against the local checked
 footprint. Its F.Silkscreen was removed in the original snapshot; pads, paste,
 mask, drill, body and courtyard geometry remain unchanged.
+
+Current JLCPCB marking guidance (checked 2026-10-28):
+https://jlcpcb.com/help/article/how-to-mark-on-pcb
+The legacy order-number placeholder was removed from the current P3.2 artwork.

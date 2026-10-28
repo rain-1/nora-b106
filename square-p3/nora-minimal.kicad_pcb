@@ -6134,18 +6134,6 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "JLCJLCJLCJLC"
-		(at 31.25 47.8 0)
-		(layer "B.SilkS")
-		(uuid "2a8b4426-6ea3-4529-992a-ff4fd999cdd7")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
 	(gr_text "NORA DRAGON P3.2"
 		(at 20.25 6.7 0)
 		(layer "B.SilkS")

@@ -86,7 +86,8 @@ Use `fabrication/nora-dragon-P3_2-gerbers.zip`:
 - Standard plated vias, green mask, white silk. No assembly service.
 - Lead-free HASL is the low-cost starting finish; ENIG is optional.
 - No gold fingers, edge chamfer, controlled impedance or via filling.
-- If offered, put the order number at `JLCJLCJLCJLC` on the back.
+- Mark on PCB: **None**. JLCPCB retired the old order-number placeholder in
+  May 2026; the current board has that placeholder removed.
 - Top stencil artwork is `fabrication/gerbers/nora-minimal-F_Paste.gtp`.
   Use a small frameless stencil for U1; see [stencil options](STENCIL.md). It is a separate order. Controlled small paste
   deposits can be used with reflow experience, but bridging hidden pads is hard
@@ -189,3 +190,36 @@ USB is for 5 V power, USB full-speed data and the installed recovery firmware.
 The optional switch is through-hole; the USB-C contacts and CC resistors are
 SMD and should be reflowed. Inspect the connector joints before powering the
 board. Use a data-capable cable; a charger alone cannot upload firmware.
+
+## Quick order selections
+
+| Option | Selection |
+|---|---|
+| Material | Standard FR4 |
+| Layers | 2 |
+| Dimensions | 40.5 × 49.5 mm |
+| Quantity | 5 for a small prototype order |
+| Delivery format | Single PCB; 1 design |
+| Thickness | 1.6 mm |
+| Solder mask / silk | Green / white; keep front and back silk |
+| Surface finish | Lead-free HASL |
+| Outer copper | 1 oz |
+| Via covering | Tented; no filling/capping |
+| Gold fingers / castellations / edge plating | No |
+| Controlled impedance | No |
+| PCB assembly | No |
+| Mark on PCB | None |
+
+Keep ordinary electrical testing and other standard defaults. The four M2 holes
+are ordinary non-plated holes, not countersunk/counterbored holes. USB-C shell
+slots are plated and are already described in the drill files. Do not omit either
+drill file or select a special hole/edge process for the mounting holes.
+
+Stencil: quantity 1, top only, stainless steel, no frame, customized finished
+size 100 × 100 mm, thickness 0.12 mm, no fiducials. Use the current F.Paste file;
+see STENCIL.md for the suggested aperture remark. Compare shipping again after
+selecting the small finished sheet. One stencil is reused for all the PCBs.
+
+[JLCPCB's current marking guidance](https://jlcpcb.com/help/article/how-to-mark-on-pcb)
+says no mark is added by default and order numbers are no longer offered from
+May 2026. Do not add the former JLCJLCJLCJLC placeholder to new orders.
