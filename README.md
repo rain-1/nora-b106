@@ -21,6 +21,26 @@ For the lowest part count, start with the SWD-only population and power it from
 a Pico's 3V3 OUT, following the wiring guide. The USB population uses its own
 regulator; do not connect Pico 3V3 in that configuration.
 
+## Minimal P1: new Backplane-designed board and USB firmware
+
+[Minimal P1](minimal-p1/README.md) is a separate 36.5 × 36.5 mm design with a
+minimum SWD population of the module and two capacitors, twelve unloaded GPIOs,
+and an optional through-hole USB-A plug. Its **1.6 mm thickness and J3 pinout
+are different from revision D**. All ordering, pinout and firmware instructions
+for it are under `minimal-p1/`; do not mix its files with revision D.
+
+The P1 project opens in KiCad 9. Built MCUboot USB recovery and USB serial
+GPIO/ADC test firmware, including an initial SWD factory image and subsequent
+USB update image, are in [minimal-p1/firmware](minimal-p1/firmware/README.md).
+The USB bootloader must first be installed via SWD. CAD checks, firmware builds
+and static checks pass; neither board nor USB/SWD has been physically tested.
+
+```
+make -C minimal-p1 check
+make -C minimal-p1 firmware-setup
+make -C minimal-p1 firmware
+```
+
 ## Install on this machine
 
 This workspace targets Debian 13's KiCad 9 packages. Run in your terminal:

@@ -1,0 +1,38 @@
+{
+  "revision": "P1",
+  "board_mm": [
+    36.5,
+    36.5
+  ],
+  "thickness_mm": 1.6,
+  "layers": 2,
+  "copper_oz": 1,
+  "export_source": "KiCad 9 working project; original Backplane source archived separately",
+  "status": "CAD validation passed; no physical prototype or programming test",
+  "sha256": {
+    "nora-minimal.kicad_pcb": "daed08813064882fccbc5f413b31a8f6b409b0d1963bba6d87fe0cfa0e2b44ba",
+    "nora-minimal.kicad_sch": "cb53296a9b51e4190d20f102ed72a80ca5b4b046f9b7b2b2f582f9b2ea7fc046",
+    "nora-minimal.kicad_pro": "45a2345a187612ae82c3648fd8d0378cc65915f63698ad30e9f89ac4eba43729",
+    "hardware/BOM.csv": "bb50ea872208ad12d8b75d9fa975935531ad3890ec5d715e08f414f51c4e2785",
+    "design.json": "1040e647974182e8ed1eb2cc8849ceaeff11702e1275579a577f1440e1218bfc"
+  },
+  "backplane_source_sha256": {
+    "backplane-source/nora-minimal.kicad_pcb": "8fafa0bca9497b18e69c3b8cad3566f8f606f8ae4d1b1b4ff631dd61d5c76f2c",
+    "backplane-source/nora-minimal.kicad_pro": "45a2345a187612ae82c3648fd8d0378cc65915f63698ad30e9f89ac4eba43729",
+    "backplane-source/nora-minimal.kicad_sch": "009fbc9417fd01b97a512fd744ef44cf9b83988fa7163cc3afd06de1332ad638"
+  },
+  "gerber_zip_sha256": "1a3c647fef5d27bbd4c0749c2dbeb25f6639aa30b1c6d83ae537cf48d8cecccd",
+  "gerber_sha256": {
+    "nora-minimal-B_Cu.gbl": "d470f978a1090e588b3fb2b5cc94f3b8f75e696536e3f2489be0b546b50f3b76",
+    "nora-minimal-B_Mask.gbs": "50782df9b113ded8fa85a7045cae29251281a3542de7feb66c8a60378ec64064",
+    "nora-minimal-B_Silkscreen.gbo": "11c01458160390c400c4650a770c4e22d811c9e2e131a3d93b0860383beacad5",
+    "nora-minimal-Edge_Cuts.gm1": "935964bcf9acb5fffdef2bd93e28990ba73e5ee8daf08fbb87c93d5c927bde5a",
+    "nora-minimal-F_Cu.gtl": "15769b6126e258d33162d53233d82a73f826e3146a41385092ac8f6b7c1e36d9",
+    "nora-minimal-F_Mask.gts": "30040298661838e18820ee6fcd97d60d9cef62724d9dd1e6ccd71ebb09ac138d",
+    "nora-minimal-F_Paste.gtp": "35eb8d8dc292734b1d7f3ed97955aff408fd23ba32ff4b8dd86e32280c747353",
+    "nora-minimal-F_Silkscreen.gto": "30d2f20da9404e31b890e904fc9a1110fe31ae5b665107cf0ddb9a1766323777",
+    "nora-minimal-NPTH.drl": "2599fe6f6f006c7b18c0235efd725618e367bc7eecd072311b42972b8adb04cf",
+    "nora-minimal-PTH.drl": "32ecd03b7b71c6eb73c6e645a49457e1067018eae1e9da5a2f54ecb813dcd17e",
+    "nora-minimal-job.gbrjob": "9559406269c8283d29444088f247348b0693bbb9e70242cceadac4ed79e2da78"
+  }
+}

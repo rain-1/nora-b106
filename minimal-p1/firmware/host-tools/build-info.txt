@@ -1,0 +1,36 @@
+/home/riv/Code/backplane-lab/projects/nora-minimal/firmware/host-tools/linux-amd64/mcumgr: go1.27.3
+	path	github.com/apache/mynewt-mcumgr-cli/mcumgr
+	mod	github.com/apache/mynewt-mcumgr-cli	v0.0.0-20221004073047-5c56bd24066c	h1:1Nca1R+k4hnK2X/oTqqjZAO/2+ebQzCK3UK7rPzdQHI=
+	dep	github.com/JuulLabs-OSS/ble	v0.0.0-20200716215611-d4fcc9d598bb	h1:kIZ7fr8RxucJXNHifPxm71yiWuzpw0SmjlafMzoOd0U=
+	dep	github.com/abiosoft/readline	v0.0.0-20180607040430-155bce2042db	h1:CjPUSXOiYptLbTdr1RceuZgSFDQ7U15ITERUGrUORx8=
+	dep	github.com/fatih/color	v1.7.0	h1:DkWD4oS2D8LGGgTQ6IvwJJXSL5Vp2ffcQg58nFV38Ys=
+	dep	github.com/fatih/structs	v1.1.0	h1:Q7juDM0QtcnhCpeyLGQKyg4TOIghuNXrkL32pHAUMxo=
+	dep	github.com/flynn-archive/go-shlex	v0.0.0-20150515145356-3f9db97f8568	h1:BMXYYRWTLOJKlh+lOBt6nUQgXAfB7oVIQt5cNreqSLI=
+	dep	github.com/joaojeronimo/go-crc16	v0.0.0-20140729130949-59bd0194935e	h1:LY29wmnTcSR92avOm1dW0LSjeE3d9Xnhm/mpGzMT/wc=
+	dep	github.com/mattn/go-colorable	v0.1.6	h1:6Su7aK7lXmJ/U79bYtBjLNaha4Fs1Rg9plHpcH+vvnE=
+	dep	github.com/mattn/go-isatty	v0.0.12	h1:wuysRhFDzyxgEmMf5xjvJ2M9dZoWAXNNr5LSBS7uHXY=
+	dep	github.com/mattn/go-runewidth	v0.0.6	h1:V2iyH+aX9C5fsYCpK60U8BYIvmhqxuOL3JZcqc1NB7k=
+	dep	github.com/mgutz/ansi	v0.0.0-20170206155736-9520e82c474b	h1:j7+1HpAFS1zy5+Q4qx1fWh90gTKwiN4QCGoY9TWyyO4=
+	dep	github.com/mgutz/logxi	v0.0.0-20161027140823-aebf8a7d67ab	h1:n8cgpHzJ5+EDyDri2s/GC7a9+qK3/YEGnBsd0uS/8PY=
+	dep	github.com/mitchellh/go-homedir	v1.1.0	h1:lukF9ziXFxDFPkA1vsr5zpc1XuPDn/wFntq5mG+4E0Y=
+	dep	github.com/pkg/errors	v0.8.1	h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
+	dep	github.com/runtimeco/go-coap	v0.0.0-20190911184520-8e5532820fc0	h1:WOVbcRe5kFuLbhZdyz8PKVR6L22C6I48fWIUS5ucpGY=
+	dep	github.com/sirupsen/logrus	v1.5.0	h1:1N5EYkVAPEywqZRJd7cwnRtCb6xJx7NH3T3WUTF980Q=
+	dep	github.com/spf13/cast	v1.3.0	h1:oget//CVOEoFewqQxwr0Ej5yjygnqGkvggSE/gB35Q8=
+	dep	github.com/spf13/cobra	v0.0.5	h1:f0B+LkLX6DtmRH1isoNA9VTtNUK9K8xYd28JNNfOv/s=
+	dep	github.com/spf13/pflag	v1.0.5	h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JXA=
+	dep	github.com/tarm/serial	v0.0.0-20180830185346-98f6abe2eb07	h1:UyzmZLoiDWMRywV4DUYb9Fbt8uiOSooupjTq10vpvnU=
+	dep	github.com/ugorji/go/codec	v1.1.7	h1:2SvQaVZ1ouYrrKKwoSk2pzd4A9evlKJb9oTL+OaLUSs=
+	dep	golang.org/x/net	v0.0.0-20191119073136-fc4aabc6c914	h1:MlY3mEfbnWGmUi4rtHOtNnnnN4UJRGSyLPx+DXA5Sq4=
+	dep	golang.org/x/sys	v0.0.0-20220608164250-635b8c9b7f68	h1:z8Hj/bl9cOV2grsOpEaQFUaly0JWN3i97mo3jXKJNp0=
+	dep	gopkg.in/abiosoft/ishell.v2	v2.0.0	h1:/J5yh3nWYSSGFjALcitTI9CLE0Tu27vBYHX0srotqOc=
+	dep	gopkg.in/cheggaaa/pb.v1	v1.0.28	h1:n1tBJnnK2r7g9OW2btFH91V92STTUevLXYFb8gy9EMk=
+	dep	mynewt.apache.org/newt	v0.0.0-20201028015609-b57111dbd19f	h1:ZZM0GfqgTGAtTWiBk/Xo0ePsBnbEDb5F1iKDII3OWDw=
+	dep	mynewt.apache.org/newtmgr	v0.0.0-20201028150837-60b2da78788c	h1:6361yI7aHLT2VPKYdNjZ2EqDm3PgQiupOUGwgGGqRrw=
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	DefaultGODEBUG=containermaxprocs=0,cryptocustomrand=1,decoratemappings=0,gotestjsonbuildtext=1,httpcookiemaxnum=0,httplaxcontentlength=1,httpmuxgo121=1,httpservecontentkeepheaders=1,httpservecontentmaxranges=1,multipathtcp=0,netedns0=0,panicnil=1,randseednop=0,rsa1024min=0,tlsmlkem=0,tlssecpmlkem=0,tlssha1=1,tracebacklabels=0,updatemaxprocs=0,urlmaxqueryparams=0,urlstrictcolons=0,winreadlinkvolume=0,winsymlink=0,x509negativeserial=1,x509rsacrt=0,x509sha256skid=0,x509sslcertoverrideplatform=0,x509usepolicies=0
+	build	CGO_ENABLED=0
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1

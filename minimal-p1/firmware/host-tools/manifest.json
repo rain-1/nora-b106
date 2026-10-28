@@ -1,0 +1,7 @@
+{
+  "source": "https://github.com/apache/mynewt-mcumgr-cli",
+  "commit": "5c56bd24066c780aad5836429bfa2ecc4f9a944c",
+  "go": "1.27.3",
+  "platform": "linux-amd64",
+  "sha256": "b7b80ef9d46474b0c1c37fbe91a5725e3541935064d01153ae043bad09ab52cf"
+}

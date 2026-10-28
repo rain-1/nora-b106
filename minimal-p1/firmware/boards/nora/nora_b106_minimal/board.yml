@@ -1,0 +1,6 @@
+board:
+  name: nora_b106_minimal
+  full_name: NORA-B106 Minimal P1
+  vendor: others
+  socs:
+    - name: nrf5340

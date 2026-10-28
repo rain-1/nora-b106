@@ -19,3 +19,10 @@ use hardware/README.md. J2 SWD remains on the left with its original pinout.
 The order settings are 2 layers, 36 x 36 mm, 0.8 mm FR4, 1 oz copper.
 There are SWD-only and USB population variants with different power wiring.
 No assembled hardware or Pico programming session has been physically tested.
+
+Minimal P1 is a separate project under `minimal-p1/`. Its working PCB/schematic
+are KiCad 9; the original Backplane 10.99 files under `backplane-source/` are
+reference snapshots. Read that project's README and hardware/programming guides
+before changes. Use `make -C minimal-p1 check` or `fabrication` for its CAD,
+and `make -C minimal-p1 firmware` / `firmware-check` for firmware. It uses
+36.5 x 36.5 mm, 1.6 mm FR4 and a different J3 pinout from revision D.
