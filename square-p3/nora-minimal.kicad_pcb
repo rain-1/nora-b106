@@ -6110,18 +6110,6 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "PROTO / UNTESTED"
-		(at 20.25 10.7 0)
-		(layer "B.SilkS")
-		(uuid "86cfa72a-63bc-4397-8eaf-629680011ed1")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
 	(via
 		(at 2.75 31.6)
 		(size 0.6)

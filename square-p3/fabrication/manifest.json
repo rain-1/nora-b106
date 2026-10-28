@@ -10,7 +10,7 @@
   "export_source": "KiCad 9 Dragon P3.2 working project, derived from Backplane-assisted Minimal P1",
   "status": "CAD validation passed; no physical prototype or programming test",
   "sha256": {
-    "nora-minimal.kicad_pcb": "4a4abccaf99faa16cfa1f8b077a44892214c08a0429d451dc1052a33b7e61c2a",
+    "nora-minimal.kicad_pcb": "46f74f01171d9862c954e62e3a85c1f1d2628c0ce7213ac90212a0d28e465df5",
     "nora-minimal.kicad_sch": "496c904149a21403e8345023c49e1cb8be724130416d19b0ad17e8e9503f05ae",
     "nora-minimal.kicad_pro": "d336fa0885c9d2d4fce43fee89d6d9e2c04826aaea47288248e54ea7a611f49a",
     "hardware/BOM.csv": "cf1eb701a4b7fb02bee6aa2e365dfdccbc4c85078ed12f22929522a16cf72d50",
@@ -18,18 +18,18 @@
     "artwork/cyber-dragon.svg": "c360f8133bf63e53518bfb6864f19934160614a3c4bf3ac0f02669363fe5bc5d",
     "artwork/manifest.json": "800421174db1c6c2d0ef61998b5f642eacbf0c70608725745c1e981e742e00eb"
   },
-  "gerber_zip_sha256": "4c19750087a7d3d0dcd403aaf9797b8c432f742e31abfb646879d5c04ef456fc",
+  "gerber_zip_sha256": "18fabab9b68adad67901311fcb00e70c1b4a38536a5f65fd10131388caa5f9fe",
   "gerber_sha256": {
-    "nora-minimal-B_Cu.gbl": "456e9b2d2760fd00b7f8fb4f331b7019bfd3b41b1b65bf9de0390cdb758208df",
-    "nora-minimal-B_Mask.gbs": "48f08bb96839ebd7647ad1d247bfc08f257eb370664adcefa359c5801ccb5008",
-    "nora-minimal-B_Silkscreen.gbo": "00d7dfde57f44247ba9dcdd9a172fbc05ad4c73a3134e54acb96aff2dcb2c2ab",
-    "nora-minimal-Edge_Cuts.gm1": "c04591f60e244546ac7b11b8eb9175d8da0b03fd1bfafeb9ebecdbb336ffaac2",
-    "nora-minimal-F_Cu.gtl": "4a1436738410b9d5602a5b1cbd95c0af579a51ec9e9d7452fdaff223ce89f0a2",
-    "nora-minimal-F_Mask.gts": "5aafecd4f88e55fdc3627625f1fb0ffd73f0f43ca0204383555b7403b6c40313",
-    "nora-minimal-F_Paste.gtp": "63295b571b4d449759093890366451f518a0cf5e5e248017500ff39a82d6922d",
-    "nora-minimal-F_Silkscreen.gto": "0a4d161be40964e613a6fe4377bfbe33da644b8a20cc7f7a2f3e3f764d4790a2",
-    "nora-minimal-NPTH.drl": "a26504e2d528523d79bb35d436e8563c8ed3abde690ef1c452fc7572bc5bd449",
-    "nora-minimal-PTH.drl": "f4b42c1b4ee703c125fd86f4384681b645e939770a6a3f822cd2217c5f09f130",
-    "nora-minimal-job.gbrjob": "a69d2a9661dde3f6591e23f656c232d0012295e699dc6ed1a0fcd9ea630aba15"
+    "nora-minimal-B_Cu.gbl": "ab8bd22afd9ab7a46fbc0213d4a0d600cde17d01cde8214ab8ed0b54248b316b",
+    "nora-minimal-B_Mask.gbs": "e0fc8172eeff38bc17e7a54269f06d6e4ff8d286116ae1334e784298cfc2b83e",
+    "nora-minimal-B_Silkscreen.gbo": "435fdc5f5a76fc74fc81468193cfad06351d0ac9d97c9b7ab175a5a067c0af4d",
+    "nora-minimal-Edge_Cuts.gm1": "d6bbdc7276113450f4d281448a70b74f9e140eeb0779f8bb96313464e5e03d66",
+    "nora-minimal-F_Cu.gtl": "07dbf2c70695b2ac18327211b7b56e986b7caf078fde411155cece5b76f9a731",
+    "nora-minimal-F_Mask.gts": "29c3a514687629934c1441dd9aef2891fff15c9168b237d39957831e3724534e",
+    "nora-minimal-F_Paste.gtp": "9212524943ed477d575d6ee2b81755f4207882cf8bf20acb5506b0355745edeb",
+    "nora-minimal-F_Silkscreen.gto": "ef5ecf8a28c7ff0cf0c5b96fdccd770f384806472e44c338b49cb9e29adbfca0",
+    "nora-minimal-NPTH.drl": "76a49f6396205d15b223326179b8d9120e68d3e823b07bfe9a3f2fa967d47d05",
+    "nora-minimal-PTH.drl": "5c6de07a8da3f7bbe49b11663e2b4c407107d344f887ab767fcb1ac016b71710",
+    "nora-minimal-job.gbrjob": "b8272a4e9d5b2af425fce0d21a3b7df1a36d20ab0cd0ededc18ceeebde2d8472"
   }
 }
