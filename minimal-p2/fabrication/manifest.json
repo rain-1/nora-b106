@@ -1,0 +1,33 @@
+{
+  "revision": "P2",
+  "board_mm": [
+    31.5,
+    27.5
+  ],
+  "thickness_mm": 1.6,
+  "layers": 2,
+  "copper_oz": 1,
+  "export_source": "KiCad 9 Compact P2 working project, derived from Minimal P1",
+  "status": "CAD validation passed; no physical prototype or programming test",
+  "sha256": {
+    "nora-minimal.kicad_pcb": "1ef775474af5c8b584b6b4b71083117e23b32710d8e9b0c4cbb98b4e8f041bb0",
+    "nora-minimal.kicad_sch": "44e7600858ce1a0a237a5a61a2f9f5e62ddd57453f6bcb887c0f32421b3a880d",
+    "nora-minimal.kicad_pro": "d336fa0885c9d2d4fce43fee89d6d9e2c04826aaea47288248e54ea7a611f49a",
+    "hardware/BOM.csv": "abbbc04b229e609155988c3a2292a2f82bb0574c2edc0676b41643d9f3479d81",
+    "design.json": "8ee156f5ede6698f168160c8cbaff201e7ff7baebbf71c2184906d836f1a35a6"
+  },
+  "gerber_zip_sha256": "5e8919c0ac2d83393457c4b4d4b89de94d1b59eaff225080a6f3f49b27fb72c3",
+  "gerber_sha256": {
+    "nora-minimal-B_Cu.gbl": "e03bca90cfa224a02b4d5b4de6f4f73ebca59acd68254492d821327247ef0a54",
+    "nora-minimal-B_Mask.gbs": "9fd80197633848e0e4733c962ec808760ae68926d2f57c23db8d14f5d88afdce",
+    "nora-minimal-B_Silkscreen.gbo": "ca26694da90e2cb10c424255d224eea1669292c5ea8fd24feaa9a1401e31e3a8",
+    "nora-minimal-Edge_Cuts.gm1": "217f4a53564bf9f9c09a68816f5cd20cf2ac6cfd7ab8978a8df36c84e7dcd85a",
+    "nora-minimal-F_Cu.gtl": "8e75e00cedf4668c1145726b617be2c3ed12ac880e2dbffa962964afb8df8440",
+    "nora-minimal-F_Mask.gts": "a915f965b963c87edbeb6bd56efae8da32fa61863c4855311db36f76fbbf95aa",
+    "nora-minimal-F_Paste.gtp": "2edbd61156cb5cf7e4736b2e454071652b7bc28ff9db8ada0740554d08766a50",
+    "nora-minimal-F_Silkscreen.gto": "80d25a7c519cd371e48e8a9d7aea76282c06b68a56b5c71f9b9e76315a8b2eb5",
+    "nora-minimal-NPTH.drl": "e7b78d1ddc9931ad3391e5a04bddb96f5d69f655cca6288dd798d6509849e486",
+    "nora-minimal-PTH.drl": "d5cb21d1150ca41aaa478a08367cc9a3ed90811079c4a07178ed722801912d62",
+    "nora-minimal-job.gbrjob": "74cbe462118e5e0998505051fd75e1be13bb77ce898339c89bbf6b9f485ff2de"
+  }
+}

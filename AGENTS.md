@@ -26,3 +26,12 @@ reference snapshots. Read that project's README and hardware/programming guides
 before changes. Use `make -C minimal-p1 check` or `fabrication` for its CAD,
 and `make -C minimal-p1 firmware` / `firmware-check` for firmware. It uses
 36.5 x 36.5 mm, 1.6 mm FR4 and a different J3 pinout from revision D.
+
+Compact P2 is a separate smaller project under `minimal-p2/`, derived from P1.
+Read its hardware/programming guides before changes. Its routed native KiCad 9
+PCB is authoritative; do not rerun the initial operation scripts in build/.
+Use `make -C minimal-p2 check` / `fabrication` and `firmware` / `firmware-check`.
+Order settings are 2 layers, 31.5 x 27.5 mm, 1.6 mm FR4, 1 oz copper. It retains
+the ground and RF constraints. J2 remains the five-pin SWD header; J3 is now
+six pins: 3V3, GND, P0.24, P1.06, P0.20, P0.07/AIN3. Use P2 firmware only;
+USB IDs and the development signing key differ from P1. Hardware remains untested.

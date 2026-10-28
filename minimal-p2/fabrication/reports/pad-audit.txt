@@ -1,0 +1,5 @@
+Audit passed: 82 module land positions/sizes/mask/paste, all assigned pad nets, 1.6 mm / 2 layers, no open via drill in module lands.
+J1 courtyard-to-antenna clearance: 19.15 mm
+J2 courtyard-to-antenna clearance: 10.72 mm
+J3 courtyard-to-antenna clearance: 10.43 mm
+Compact dimensions, six-pin GPIO header and recommended RF clearances passed.

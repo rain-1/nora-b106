@@ -1,5 +1,16 @@
 # NORA-B106 board workspace
 
+**Latest compact design: [Compact P2](minimal-p2/README.md), 31.5 × 27.5 mm,
+four GPIOs, SWD and optional through-hole USB-A.** This uses 35% less PCB area
+than Minimal P1, with the same minimum assembly of the module and two capacitors.
+Use its [Gerber ZIP](minimal-p2/fabrication/nora-minimal-P2-gerbers.zip),
+[pinout/ordering guide](minimal-p2/hardware/README.md) and
+[matching built USB firmware](minimal-p2/firmware/README.md).
+Its six-pin GPIO header differs from both earlier designs. The USB bootloader
+needs an initial SWD installation. CAD and firmware checks pass; hardware is
+physically untested. Run `make -C minimal-p2 fabrication` for its validation and
+exports. Earlier projects below are retained separately.
+
 Revision D is a 36 x 36 mm two-layer NORA-B106 breakout for self assembly.
 It exposes SWD, twelve GPIOs, optional USB-C power/data, an LED, and reset.
 

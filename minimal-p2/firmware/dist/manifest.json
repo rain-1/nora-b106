@@ -1,0 +1,73 @@
+{
+  "board": "nora_b106_minimal/nrf5340/cpuapp",
+  "app_version": "1.1.0+0",
+  "zephyr": "v4.4.0",
+  "zephyr_commit": "684c9e8f32e4373a21098559f748f06915f950c9",
+  "mcuboot_commit": "ee39e2d694bd827ffd1bebbce2f571a9154e6ec2",
+  "sdk": "1.0.1",
+  "sdk_archives_sha256": {
+    "zephyr-sdk-1.0.1_linux-x86_64_minimal.tar.xz": "ca9bc0ff66fafca1dac9d592a36d953cf16d096a9d09b1c0357f021cf9f6a7eb",
+    "toolchain_gnu_linux-x86_64_arm-zephyr-eabi.tar.xz": "21b85981cb5a1818d9bc53d82af80f208946ec038b982ff1907287572ed3a634"
+  },
+  "source_sha256": {
+    "README.md": "1991ddaf892564bbb23b4973aa8695e19797e793b3e660e457e73d34cd7554d8",
+    "blinky/CMakeLists.txt": "5519e6fe0002ce7759f316451a34ae1a23ad07cfd4199552c2bbf8633fee90bc",
+    "blinky/app.overlay": "8a69ff9ca412b55ed26f10d12eaf48673cc23ec622e147732b633459189b8e9a",
+    "blinky/prj.conf": "8ff85b15ce0d9afb8d57cb6a8a9899c837af4c561d1d0e935899b6104c863571",
+    "blinky/src/main.c": "fbbd4dcb8c85be00e82d471a87c3d39e4ca4c083ebdc18d6a24607fa05a46926",
+    "boards/nora/nora_b106_minimal/Kconfig.nora_b106_minimal": "915bf54817921efb3f78834765f238370c77d8104cd37a72cecc6c286e46cf5a",
+    "boards/nora/nora_b106_minimal/board.cmake": "1f7e101eef51bc3282384e3bd318d7d0b0c2ac97cfe1f1d787427b73525343d9",
+    "boards/nora/nora_b106_minimal/board.yml": "30f7be58f7fb828de371316f0ee2e7a4e1d71080a338a521adfae4522858d40a",
+    "boards/nora/nora_b106_minimal/nora_b106_minimal_nrf5340_cpuapp.dts": "f06c4f58cba0411573d930c3a9f24ecdb4a7258def57fc38ea322b60d77d44c2",
+    "boards/nora/nora_b106_minimal/nora_b106_minimal_nrf5340_cpuapp_defconfig": "c59806d63afba0eb8456acfdfe44400656347b652789fdc48114ee582adf98b1",
+    "bootloader/prj.conf": "54c5bb03191c9b8d9b27c422631e3e9914ad6cf1d70b374548e1fa36ccec29a4",
+    "keys/development.pem": "885225ea84a3421446fb1a682b935ff9d08e02bc424ce44afc02e6c78fa13ddc",
+    "keys/development.pub.pem": "bfb98693571a79de73e882303e7d6e7d8e1c62ce2dac75ea2c5b19fcb4cc88f5",
+    "licenses/CMSIS-LICENSE.txt": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "licenses/CMSIS6-LICENSE": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+    "licenses/MCUboot-LICENSE": "86438164119907debf649e2f9f18a43ad506d75421c9d9675700066b0456205d",
+    "licenses/MbedTLS-LICENSE": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b",
+    "licenses/Zephyr-Apache-2.0.txt": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+    "licenses/Zephyr-LICENSE": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "licenses/zcbor-LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "requirements-build.lock": "742d2a0c5bb55d8c6eee0c8226966124d226d261e3fd6e57d3ffb1778028c3f5",
+    "tests/test_usb_update.py": "b7e7c42cea182b19e1c2076d90d61be087ab1c9a8e7c0e6e8c2488e5d6c836d9",
+    "tools/build.py": "74e060d0324839d13d4db970efb081150716dc46a61f590d7b8fb410fbb9af7c",
+    "tools/install_mcumgr.py": "9b73f3b3699157fb6c3e7f2a4fd55f6c33127d1ea2774af9baeb6e5460b2374c",
+    "tools/setup.py": "c8a0ef2e668fe2d0f4379b6b809007fb388f379defbec33b2945588552942449",
+    "tools/usb_update.py": "186a9a9e21674a1718178bed6eeec1b66a538cfb34abbf81215c04d832a2909a",
+    "tools/validate_build.py": "433f8034b425ad49d1f3be6f1336f8def72d966f4db43616c065f5ec3b0df3ef",
+    "usb_bringup/CMakeLists.txt": "f2b2db5c6dd31029b404f80c414d8c7168eff1140acbd72038ee4ababa280894",
+    "usb_bringup/VERSION": "56db4a5edbbec4d416492458a70e0f3c8cf30dcde046e6f2d1dc7b395f8ee7f8",
+    "usb_bringup/prj.conf": "c63d702f2e73d52c83e52932603194a2d152382db9de9a8ade2814d3b1aa5c2e",
+    "usb_bringup/src/main.c": "76cf40819885874d71dcb3272f430792b17d889da080bc2c51d0b0187b0ba2cc"
+  },
+  "status": "Build and static checks only; hardware/USB/SWD not tested",
+  "flash": {
+    "boot": [
+      0,
+      196608
+    ],
+    "primary": [
+      196608,
+      589824
+    ],
+    "secondary": [
+      589824,
+      983040
+    ],
+    "storage": [
+      983040,
+      1048576
+    ]
+  },
+  "sha256": {
+    "nora-app.elf": "eee0c9a60861205c10d1274f9418f425dc136f506148df7079f9b62c17e5dc28",
+    "nora-app.signed.bin": "0e69b03f14b291b3d30b7c1f2c157dde1f06b09c1c369fd42175add5217d2fa5",
+    "nora-app.signed.hex": "1811a9a53720141d3a2fb600508e4e5c50796b04ed91b6eb5bf7803e3865b639",
+    "nora-bootloader.elf": "7d75ebe3581bff2469709df415fa0173cd6d84cec11b61e449bb45617ed557bc",
+    "nora-bootloader.hex": "a172130e7f0623aac603c59e2e9bf7d93f4ae2bf3abc239acbe665088b963024",
+    "nora-factory.hex": "6149274e46dbdc22ad2174ef8ff68d03190aed466ff0dd0d303231ee63d7ed4a",
+    "validation.json": "60538f010f0548e91ab1b5942bda4eb1a0293c042fcfc997af3a798083ad4ddb"
+  }
+}

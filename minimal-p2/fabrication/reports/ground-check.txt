@@ -1,0 +1,2 @@
+Top ground islands: 2; vias per island: [17, 2]
+Module ground reference passed; 19 ground stitching vias

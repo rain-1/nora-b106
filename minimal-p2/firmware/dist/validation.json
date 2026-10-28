@@ -1,0 +1,39 @@
+{
+  "result": "passed",
+  "hardware_tested": false,
+  "signed_application_bytes": 80288,
+  "gpio_header": [
+    "P0.24",
+    "P1.06",
+    "P0.20",
+    "P0.07"
+  ],
+  "factory_hex_ranges": [
+    [
+      0,
+      52412
+    ],
+    [
+      52416,
+      55841
+    ],
+    [
+      55844,
+      55884
+    ],
+    [
+      196608,
+      276896
+    ]
+  ],
+  "bootloader_bytes": 55877,
+  "checks": [
+    "Both images: calibrated RC LFCLK and 20 pF HFXO",
+    "GPIO mapping matches PCB J3; no DK GPIO/peripheral assumptions",
+    "USB recovery request/reset/power-on window configured",
+    "Application and bootloader use matching partitions",
+    "Signature headers and Cortex-M vectors occupy expected addresses",
+    "Factory HEX excludes UICR, network flash, storage and secondary slot",
+    "Bootloader contains the supplied development public key"
+  ]
+}
