@@ -6110,42 +6110,6 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "40.5 x 49.5 mm"
-		(at 20.25 8.7 0)
-		(layer "B.SilkS")
-		(uuid "20008c9f-35e9-4206-9470-c8aacdf550ac")
-		(effects
-			(font
-				(size 0.9 0.9)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
-	(gr_text "github.com/rain-1/nora-b106"
-		(at 20.25 11.8 0)
-		(layer "B.SilkS")
-		(uuid "27961e3e-e687-4c3c-b2ee-ed652e4d7de4")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
-	(gr_text "NORA DRAGON P3.2"
-		(at 20.25 6.7 0)
-		(layer "B.SilkS")
-		(uuid "4bb3e65f-bfb3-4acc-869f-3e5c63ccbc5c")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
 	(gr_text "PROTO / UNTESTED"
 		(at 20.25 10.7 0)
 		(layer "B.SilkS")
@@ -6153,18 +6117,6 @@
 		(effects
 			(font
 				(size 0.8 0.8)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
-	(gr_text "for rain-1"
-		(at 20.25 40.4 0)
-		(layer "B.SilkS")
-		(uuid "952fc925-0f08-463c-ac64-70daccb25fd5")
-		(effects
-			(font
-				(size 0.9 0.9)
 				(thickness 0.15)
 			)
 			(justify mirror)
