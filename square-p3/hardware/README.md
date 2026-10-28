@@ -14,6 +14,7 @@
 | U3 | USBLC6-2SC6, SOT-23-6 | Omit | Fit |
 | C3, C4 | 1 µF, 16 V, X7R, 0805 | Omit | Fit both |
 | JP1 | Open solder bridge, no purchased part | Leave open | Bridge for USB power |
+| SW1 | Normally-open 6 mm through-hole reset button | Optional | Optional |
 
 C3 bypasses USB 5 V; C4 is the regulator output capacitor and remains connected
 with JP1 open. C1/C2 decouple the target's separate 3.3 V rail. Choose capacitors
@@ -73,9 +74,9 @@ GPIO headers. Use P1 firmware; SWO and the remaining GPIOs are not exposed.
 
 ## JLCPCB settings
 
-Use `fabrication/nora-square-P3-gerbers.zip`:
+Use `fabrication/nora-dragon-P3_1-gerbers.zip`:
 
-- 2 layers, FR4, **49.5 × 49.5 mm, 1.6 mm thickness**, 1 oz copper.
+- 2 layers, FR4, **38 × 49.5 mm, 1.6 mm thickness**, 1 oz copper.
 - Standard plated vias, green mask, white silk. No assembly service.
 - Lead-free HASL is the low-cost starting finish; ENIG is optional.
 - No gold fingers, edge chamfer, controlled impedance or via filling.
@@ -86,7 +87,7 @@ Use `fabrication/nora-square-P3-gerbers.zip`:
   to inspect or repair. The stencil is not required by the PCB manufacturer.
 
 Minimum signal width/clearance is 0.18/0.155 mm, ordinary vias 0.6/0.3 mm.
-Power routing is generally 0.30 mm. C2 (100 nF) is closest to U1; C1 is the
+Main target-power routing is 0.40 mm; USB supply routing is 0.25–0.30 mm. C2 (100 nF) is closest to U1; C1 is the
 bulk capacitor below it. There are no open drilled vias in U1's
 solder lands. The USB connector has plated slots plus non-plated locating holes;
 keep both drill files in the upload and review the manufacturer's drill preview.
@@ -129,14 +130,26 @@ impedance guarantee. Short pad neckdowns and the post-ESD D− crossover use
 narrower tracks; the crossover changes layer outside the paired section.
 The board is not a USB compliance-tested product.
 
-## Mounting and size tier
+## Mounting, reset and size tier
 
-The four 2.2 mm non-plated holes suit optional M2 hardware. Hole centres are
-(3.5, 3.5), (46, 3.5), (3.5, 46), (46, 46) mm from the top-left corner in the
-component-side view. Use small heads/spacers within the footprint courtyards.
-Mounting hardware is optional and has no electrical connection. There are no
-extra electronic parts compared with P1. The signature is back silkscreen only.
+Two 2.2 mm unplated holes suit optional M2 hardware. Centres are (3.5, 46) and
+(34.5, 46) mm from the top-left corner in the component-side view. Use small
+heads/spacers within the footprint courtyards. The former top holes were removed
+to keep mounting metal clear of the antenna on the narrower board.
 
-The 49.5 mm outline fits a 50 mm square tier. Use the board's actual dimensions
-in any quote, not 50 mm nominal. A 50 mm tier does not mean that a smaller board
-is cheaper; compare the delivered price including a separately sized stencil.
+SW1 is optional: a normally-open 6 mm through-hole pushbutton with 6.5 mm
+spacing across its paired legs and 4.5 mm spacing between rows. Check the
+purchased switch against `Breakout:SW_PUSH_6mm`. It grounds RESET_N while held;
+release it to restart into the P1 firmware's USB recovery mode. No external
+pull-up or capacitor is added; reset retains the module's internal pull-up.
+Iron-solder this button, headers and USB plug after SMD reflow. Omit SW1 to keep
+the minimum assembly unchanged. The firmware guide describes normal power-on
+recovery timeout versus a RESET_N reset.
+
+The rectangular outline is 38 × 49.5 mm; board thickness remains 1.6 mm. The
+USB plug body is centred at x=19 mm. Use the actual outline dimensions in a
+quote. This still fits a 50 mm square tier and does not lower its base price.
+
+The dragon and credit are white **B.Silkscreen** ink. No decorative copper or
+mask cutouts are added. Green mask/white silk is the default low-cost choice;
+other mask colours change the background of the same single-colour art.

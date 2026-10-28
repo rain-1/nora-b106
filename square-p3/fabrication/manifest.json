@@ -1,33 +1,35 @@
 {
-  "revision": "P3",
+  "revision": "P3.1",
   "board_mm": [
-    49.5,
+    38,
     49.5
   ],
   "thickness_mm": 1.6,
   "layers": 2,
   "copper_oz": 1,
-  "export_source": "KiCad 9 Square P3 working project, derived from Backplane-assisted Minimal P1",
+  "export_source": "KiCad 9 Dragon P3.1 working project, derived from Backplane-assisted Minimal P1",
   "status": "CAD validation passed; no physical prototype or programming test",
   "sha256": {
-    "nora-minimal.kicad_pcb": "4281c31c7bbd87134a63e724a21b29c92ff41114293ba44df6321f411646f5c5",
-    "nora-minimal.kicad_sch": "13eaabdcc2ea761010a1aa4fabb58e6523561a350a619c7b12b695dabbb593ff",
+    "nora-minimal.kicad_pcb": "6c08ce2d9154adc0cf5ca01aee3b7b9b1f6afdb582fb1f8d890286a1c949847a",
+    "nora-minimal.kicad_sch": "97e5336d5b0db3fa45927a579d4175ad2717613ee9826a519f1cbcc725e5c8fb",
     "nora-minimal.kicad_pro": "d336fa0885c9d2d4fce43fee89d6d9e2c04826aaea47288248e54ea7a611f49a",
-    "hardware/BOM.csv": "bb50ea872208ad12d8b75d9fa975935531ad3890ec5d715e08f414f51c4e2785",
-    "design.json": "d41eb9c953c59ebc02cfdd52372361a36418a077972c056521107095434b215c"
+    "hardware/BOM.csv": "856371223abfd610adb044795ee48cc6520251e22e983e5ad8af3d5ec5dd7ab7",
+    "design.json": "42ab9e33c83ab3aedf24540c35fab007e7ad8b8f20276343f2dc55da2da048a0",
+    "artwork/cyber-dragon.svg": "827cc67b1516562ca260d1756772ec64bf125c1f54ce7bda898afad7365fd776",
+    "artwork/manifest.json": "3f539a527e623625a87497202a447199bfa8fd0f0f948d2828a5dc460a815b70"
   },
-  "gerber_zip_sha256": "0b03bea3c8fd41524e7fc7849dcffa3db5cfe2570295f86545f177efc405612c",
+  "gerber_zip_sha256": "82fcb807292b455689ca41e231aa990f3f2178a5064c9e416943ee8ea0a73130",
   "gerber_sha256": {
-    "nora-minimal-B_Cu.gbl": "ad14307c7ba40ed4e8e696bbe2052d2b6c54c06f75b39648d3ae6df6c4b3069a",
-    "nora-minimal-B_Mask.gbs": "7231dc5a4d70d0cfff355c9a757a2c07fc3433cb603af07c02544b53e912a278",
-    "nora-minimal-B_Silkscreen.gbo": "d994daed6586154320d5660800fa50e0c071d0aba3c0a736644a35b899a149f0",
-    "nora-minimal-Edge_Cuts.gm1": "12dc6f0e12687f01919bf9682666694f4d99a447bc10e6265bd9f4bfc2859363",
-    "nora-minimal-F_Cu.gtl": "c2c0bef4d69d95a416a819148b798e71ce45cc33dc001129f6a718b56d23713f",
-    "nora-minimal-F_Mask.gts": "8a7d55f179f86b76c707f9bf362c38a96b7ef86e72f4ca554272525892920b56",
-    "nora-minimal-F_Paste.gtp": "0f949265f8ad05db630132ec0fe39c26c29fb8c498c71d6200ceeae238dac383",
-    "nora-minimal-F_Silkscreen.gto": "9d211aeebde6d8efe1136f1acffae5e760235f2f1c57d40fab55bf7416751633",
-    "nora-minimal-NPTH.drl": "45bdb7b34947ca0731591a16c5d6bf137b0c0b13f60d1d894d08db130dbd48bf",
-    "nora-minimal-PTH.drl": "b18854860242a4ba7798d82688e77369cc512a0dab34c33ef3bea6f7e28498f3",
-    "nora-minimal-job.gbrjob": "18098965c26e5068870276287e424c1a495a67004998a99858feebb829b63813"
+    "nora-minimal-B_Cu.gbl": "2c7e294f2e4633191368492376568c5ef36e61d5429c597aba91399a95b7c1f9",
+    "nora-minimal-B_Mask.gbs": "9cad1b4ffeb2cd259e15d8ce82f3d33df9e4bb1e9f575e2250f6144d043e9596",
+    "nora-minimal-B_Silkscreen.gbo": "f2d01fa243cba462ca1f25c1f97f191adb6c9cc4b1e05a9f7cb3650d925dee99",
+    "nora-minimal-Edge_Cuts.gm1": "fb63fda7b14dfbeab838d64aebef7baa90f034eb55ec26f7c0156fad0061f0a6",
+    "nora-minimal-F_Cu.gtl": "5ea53fad819b7fd0e77a5589eab55fce4f98d220c6c59f38a4b369b265915279",
+    "nora-minimal-F_Mask.gts": "14e047ccda5075bf5ba7287c3cf4147c64f68c8b96ba287c6ce295056f1d67f5",
+    "nora-minimal-F_Paste.gtp": "1203eb87680f4ad0cdd4da5dfd1fa3d29d87ff3f4925ea021cb854a954cf0bb4",
+    "nora-minimal-F_Silkscreen.gto": "f9ed5358f0c54e364678226fdceb6d1d8220d2af090e4a09427976d54a5574d2",
+    "nora-minimal-NPTH.drl": "b8dc21188f668916319fdb7774558323dc2743eb2050058d70c0d5e5bf631918",
+    "nora-minimal-PTH.drl": "e2bcaae6f6b1d03b052a01f45ff81af4e2e89cddc5a479917ee70debf7655520",
+    "nora-minimal-job.gbrjob": "d0d35ecdc01aa47815c32479c5bd6a5d089dc0fbd7fb135265889a1a96721f9b"
   }
 }

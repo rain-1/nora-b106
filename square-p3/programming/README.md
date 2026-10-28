@@ -1,4 +1,4 @@
-# First tests: Square P3 (P1-compatible pinout)
+# First tests: Dragon P3.1 (P1-compatible pinout)
 
 This is a low-cost CMSIS-DAP route to try, **not a hardware-tested combination
 in this project**. The NORA-B106 uses a dual-core nRF5340; use software with
@@ -153,9 +153,9 @@ image: it needs the signed MCUboot header and matching bootloader.
 USB application. The USB build uses its own board definition rather than the
 Nordic DK configuration. No Bluetooth/network-core image is included.
 
-## P3 first USB firmware install
+## P3.1 first USB firmware install
 
-P3 deliberately retains P1's full J2/J3 pin mapping and power/USB circuit. Use
+P3.1 deliberately retains P1's full J2/J3 pin mapping and power/USB circuit. Use
 the unchanged P1 bootloader and application pair (USB names still say P1).
 After the power and read-only SWD checks above, fit all USB parts, bridge JP1,
 power through USB and disconnect Pico 3V3 OUT. From `square-p3/`:
@@ -169,3 +169,12 @@ USB serial commands are in the shared firmware guide. `nora pins` lists J3
 pins 3–14; the external LED is pin 13, ADC is pin 14. For a later USB update,
 run the shared updater from `minimal-p1/`, following that firmware guide.
 No P2 firmware should be used on this twelve-GPIO board.
+
+## Optional reset button
+
+If SW1 is fitted, press and release it to reset the target. With the shared P1
+USB bootloader installed, a RESET_N reset stays in USB recovery until commanded
+to reset. A normal power-on gives the usual eight-second recovery window.
+`nora dfu` remains available from the application, and J2 pin 5 still permits an
+external reset wire/button if SW1 is omitted. SW1 is not a separate boot-mode
+strap and does not change any GPIO header mapping.

@@ -5,16 +5,16 @@
       "Application": "Pcbnew",
       "Version": "9.0.2+dfsg-1"
     },
-    "CreationDate": "2026-10-28T12:39:08+00:00"
+    "CreationDate": "2026-10-28T13:17:37+00:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "nora-minimal",
       "GUID": "6e6f7261-2d6d-4696-9e69-6d616c2e6b69",
-      "Revision": "P3"
+      "Revision": "P3.1"
     },
     "Size": {
-      "X": 49.55,
+      "X": 38.05,
       "Y": 49.55
     },
     "LayerNumber": 2,

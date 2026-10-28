@@ -9,3 +9,4 @@ U2,XC6206P332MR-G,SOT-23-3,1,omit,required
 U3,USBLC6-2SC6,SOT-23-6,1,omit,required
 C3 C4,1uF 16V X7R,0805,2,omit,required
 JP1,Solder bridge,no purchased part,0,open,closed for USB power
+SW1,RESET normally-open 6mm (optional),Breakout:SW_PUSH_6mm,1,optional,optional

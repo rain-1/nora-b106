@@ -14,7 +14,8 @@ parser.add_argument('--output', type=Path)
 args = parser.parse_args()
 current = json.loads((root / 'design.json').read_text())
 previous = json.loads((p1 / 'design.json').read_text())
-parts = {ref: nets for ref, nets in current['parts'].items() if ref not in {'H1', 'H2', 'H3', 'H4'}}
+parts = {ref: nets for ref, nets in current['parts'].items() if ref not in {'H1', 'H2', 'SW1'}}
+assert current['parts']['SW1'] == {'1': 'RESET_N', '2': 'GND'}, 'Reset button wiring changed'
 assert parts == previous['parts'], 'P3/P1 electrical parts or net mapping changed'
 assert current['gpio_header'] == previous['gpio_header'], 'P3/P1 J3 pinout mismatch'
 assert current['module'] == previous['module'], 'Module pin mapping changed'

@@ -31,9 +31,13 @@
 
 The CAD checks do not establish physical operation. USB firmware and the Pico
 programming combination remain untested. The module symbol and 82-pad land
-pattern were reused from the checked revision D project; the Square P3 routing is new. Initial P1 was Backplane-assisted; P3 uses native
+pattern were reused from the checked revision D project; the Dragon P3.1 layout is updated. Initial P1 was Backplane-assisted; P3.1 uses native
 KiCad edits and the KiCad Python API.
 
 Stencil ordering references are linked in hardware/STENCIL.md.
 Shared firmware source, dependency licences and artifact hashes are retained
 in ../minimal-p1/firmware/; the P3 compatibility check verifies them.
+
+The optional SW_Push symbol and SW_PUSH_6mm footprint come from the installed
+KiCad libraries, with their existing licence notices retained in hardware/.
+Cyber dragon generation details and vector import constraints are in artwork/.
