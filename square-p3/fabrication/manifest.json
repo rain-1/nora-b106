@@ -1,35 +1,35 @@
 {
-  "revision": "P3.1",
+  "revision": "P3.2",
   "board_mm": [
-    38,
+    40.5,
     49.5
   ],
   "thickness_mm": 1.6,
   "layers": 2,
   "copper_oz": 1,
-  "export_source": "KiCad 9 Dragon P3.1 working project, derived from Backplane-assisted Minimal P1",
+  "export_source": "KiCad 9 Dragon P3.2 working project, derived from Backplane-assisted Minimal P1",
   "status": "CAD validation passed; no physical prototype or programming test",
   "sha256": {
-    "nora-minimal.kicad_pcb": "6c08ce2d9154adc0cf5ca01aee3b7b9b1f6afdb582fb1f8d890286a1c949847a",
-    "nora-minimal.kicad_sch": "97e5336d5b0db3fa45927a579d4175ad2717613ee9826a519f1cbcc725e5c8fb",
+    "nora-minimal.kicad_pcb": "771c2049bfe72eb43eca887bfa3998818853b2d7c4ab2ea8adae84e70e4abde4",
+    "nora-minimal.kicad_sch": "496c904149a21403e8345023c49e1cb8be724130416d19b0ad17e8e9503f05ae",
     "nora-minimal.kicad_pro": "d336fa0885c9d2d4fce43fee89d6d9e2c04826aaea47288248e54ea7a611f49a",
-    "hardware/BOM.csv": "856371223abfd610adb044795ee48cc6520251e22e983e5ad8af3d5ec5dd7ab7",
-    "design.json": "42ab9e33c83ab3aedf24540c35fab007e7ad8b8f20276343f2dc55da2da048a0",
-    "artwork/cyber-dragon.svg": "827cc67b1516562ca260d1756772ec64bf125c1f54ce7bda898afad7365fd776",
-    "artwork/manifest.json": "3f539a527e623625a87497202a447199bfa8fd0f0f948d2828a5dc460a815b70"
+    "hardware/BOM.csv": "cf1eb701a4b7fb02bee6aa2e365dfdccbc4c85078ed12f22929522a16cf72d50",
+    "design.json": "71ed92f8a34a0ac2103bbcbe01f8b70c59be696f4738db48aa8e1e24ff73c83d",
+    "artwork/cyber-dragon.svg": "c360f8133bf63e53518bfb6864f19934160614a3c4bf3ac0f02669363fe5bc5d",
+    "artwork/manifest.json": "800421174db1c6c2d0ef61998b5f642eacbf0c70608725745c1e981e742e00eb"
   },
-  "gerber_zip_sha256": "82fcb807292b455689ca41e231aa990f3f2178a5064c9e416943ee8ea0a73130",
+  "gerber_zip_sha256": "eed0c9056a1771b44f17ff2a2b1b3af543682622b1a728f4b3391879f0b1ed55",
   "gerber_sha256": {
-    "nora-minimal-B_Cu.gbl": "2c7e294f2e4633191368492376568c5ef36e61d5429c597aba91399a95b7c1f9",
-    "nora-minimal-B_Mask.gbs": "9cad1b4ffeb2cd259e15d8ce82f3d33df9e4bb1e9f575e2250f6144d043e9596",
-    "nora-minimal-B_Silkscreen.gbo": "f2d01fa243cba462ca1f25c1f97f191adb6c9cc4b1e05a9f7cb3650d925dee99",
-    "nora-minimal-Edge_Cuts.gm1": "fb63fda7b14dfbeab838d64aebef7baa90f034eb55ec26f7c0156fad0061f0a6",
-    "nora-minimal-F_Cu.gtl": "5ea53fad819b7fd0e77a5589eab55fce4f98d220c6c59f38a4b369b265915279",
-    "nora-minimal-F_Mask.gts": "14e047ccda5075bf5ba7287c3cf4147c64f68c8b96ba287c6ce295056f1d67f5",
-    "nora-minimal-F_Paste.gtp": "1203eb87680f4ad0cdd4da5dfd1fa3d29d87ff3f4925ea021cb854a954cf0bb4",
-    "nora-minimal-F_Silkscreen.gto": "f9ed5358f0c54e364678226fdceb6d1d8220d2af090e4a09427976d54a5574d2",
-    "nora-minimal-NPTH.drl": "b8dc21188f668916319fdb7774558323dc2743eb2050058d70c0d5e5bf631918",
-    "nora-minimal-PTH.drl": "e2bcaae6f6b1d03b052a01f45ff81af4e2e89cddc5a479917ee70debf7655520",
-    "nora-minimal-job.gbrjob": "d0d35ecdc01aa47815c32479c5bd6a5d089dc0fbd7fb135265889a1a96721f9b"
+    "nora-minimal-B_Cu.gbl": "48ee22a4dd60bd91e5f77ed7097477367371d1b094852e4650475b90390f5fea",
+    "nora-minimal-B_Mask.gbs": "a432600430b548d02b133b3c5f2f0dd89100dec61dca19c39cbe405ff34b8860",
+    "nora-minimal-B_Silkscreen.gbo": "24597da73c103770b41fa3e9bcbf577579fd1a93906bf44cd1fc9cf9c69f4172",
+    "nora-minimal-Edge_Cuts.gm1": "0c450322c8485483a69a0ebbba008820db2f11eeec481e3a11f5794419d4fb7e",
+    "nora-minimal-F_Cu.gtl": "3703ecca81128bda4dd1abe394e275fd01582e8a607006b0b88b8ef2f7a6b9bc",
+    "nora-minimal-F_Mask.gts": "fa4408b9271332e4ab44ddae04c3ba330eea9a9c0aedb939677f3e03d3f62dbc",
+    "nora-minimal-F_Paste.gtp": "ca4a943d3482a9b308bad25e5f252219f109e9267497adeb070632a49feb8c10",
+    "nora-minimal-F_Silkscreen.gto": "1ab3920a36d22d64dccab8147cc2158c1e95c5464d630e312de4281dc19a3cf6",
+    "nora-minimal-NPTH.drl": "323945af68555d667143a77683ee309ca0f2ef112b7870ab5ffd98c7c8058e14",
+    "nora-minimal-PTH.drl": "abdd877648656a7c85ac5305340e1f8f0046d5733c37aa1f6a6c1a83e150a775",
+    "nora-minimal-job.gbrjob": "7abebaf43366dd8d60f3f7b68522e68fb1f2c76203c6678397b9358314bad3b0"
   }
 }

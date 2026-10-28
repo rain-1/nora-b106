@@ -21,10 +21,10 @@ for p in g.iterdir():
  if p.is_file():p.unlink()
 run(*cli,'pcb','export','gerbers','--layers','F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts','--subtract-soldermask','-o',str(g)+'/',r/'nora-minimal.kicad_pcb')
 run(*cli,'pcb','export','drill','--format','excellon','--excellon-separate-th','--excellon-units','mm','-o',str(g)+'/',r/'nora-minimal.kicad_pcb')
-z=out/'nora-dragon-P3_1-gerbers.zip'
+z=out/'nora-dragon-P3_2-gerbers.zip'
 with zipfile.ZipFile(z,'w',zipfile.ZIP_DEFLATED) as a:
  for p in sorted(g.iterdir()):a.write(p,p.name)
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 files=['nora-minimal.kicad_pcb','nora-minimal.kicad_sch','nora-minimal.kicad_pro','hardware/BOM.csv','design.json','artwork/cyber-dragon.svg','artwork/manifest.json']
-m={'revision':'P3.1','board_mm':[38,49.5],'thickness_mm':1.6,'layers':2,'copper_oz':1,'export_source':'KiCad 9 Dragon P3.1 working project, derived from Backplane-assisted Minimal P1','status':'CAD validation passed; no physical prototype or programming test','sha256':{f:sha(r/f) for f in files},'gerber_zip_sha256':sha(z),'gerber_sha256':{p.name:sha(p) for p in sorted(g.iterdir())}}
+m={'revision':'P3.2','board_mm':[40.5,49.5],'thickness_mm':1.6,'layers':2,'copper_oz':1,'export_source':'KiCad 9 Dragon P3.2 working project, derived from Backplane-assisted Minimal P1','status':'CAD validation passed; no physical prototype or programming test','sha256':{f:sha(r/f) for f in files},'gerber_zip_sha256':sha(z),'gerber_sha256':{p.name:sha(p) for p in sorted(g.iterdir())}}
 (out/'manifest.json').write_text(json.dumps(m,indent=2)+'\n');print('Fabrication package:',z)

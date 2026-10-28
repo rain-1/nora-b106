@@ -1,4 +1,4 @@
-# First tests: Dragon P3.1 (P1-compatible pinout)
+# First tests: Dragon P3.2 (P1-compatible pinout)
 
 This is a low-cost CMSIS-DAP route to try, **not a hardware-tested combination
 in this project**. The NORA-B106 uses a dual-core nRF5340; use software with
@@ -153,9 +153,10 @@ image: it needs the signed MCUboot header and matching bootloader.
 USB application. The USB build uses its own board definition rather than the
 Nordic DK configuration. No Bluetooth/network-core image is included.
 
-## P3.1 first USB firmware install
+## P3.2 first USB firmware install
 
-P3.1 deliberately retains P1's full J2/J3 pin mapping and power/USB circuit. Use
+P3.2 retains P1's J2/J3 mapping, module power and USB D+/D−/VBUS interfaces.
+Its USB-C socket and two CC resistors do not require a firmware change. Use
 the unchanged P1 bootloader and application pair (USB names still say P1).
 After the power and read-only SWD checks above, fit all USB parts, bridge JP1,
 power through USB and disconnect Pico 3V3 OUT. From `square-p3/`:
@@ -178,3 +179,12 @@ to reset. A normal power-on gives the usual eight-second recovery window.
 `nora dfu` remains available from the application, and J2 pin 5 still permits an
 external reset wire/button if SW1 is omitted. SW1 is not a separate boot-mode
 strap and does not change any GPIO header mapping.
+
+## USB-C cable
+
+Use a data-capable USB-A-to-C or USB-C-to-C cable to a computer. Both plug
+orientations are wired. Fit R1/R2 and all other USB parts, close JP1 for USB
+power, and leave the debugger Pico's 3V3 OUT disconnected. SW1 and `nora dfu`
+enter the same shared P1 recovery mode as before. A bare module still needs
+its initial SWD installation; changing the connector does not add a ROM USB
+bootloader or turn this into a drag-and-drop UF2 drive.

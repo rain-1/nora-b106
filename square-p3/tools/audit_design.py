@@ -29,14 +29,14 @@ print('Audit passed: 82 module land positions/sizes/mask/paste, all assigned pad
 # Compact board dimensions, recommended ground extent and tall-part RF spacing.
 edges=[v for q in b.GetDrawings() if isinstance(q,p.PCB_SHAPE) and q.GetLayer()==p.Edge_Cuts for v in [q.GetStart(),q.GetEnd()]]
 x0,y0=min(v.x for v in edges),min(v.y for v in edges);x1,y1=max(v.x for v in edges),max(v.y for v in edges)
-assert (round(p.ToMM(x1-x0),4),round(p.ToMM(y1-y0),4))==(38,49.5)
+assert (round(p.ToMM(x1-x0),4),round(p.ToMM(y1-y0),4))==(40.5,49.5)
 body=[v for q in u.GraphicalItems() if q.GetLayer()==p.F_Fab for v in [q.GetStart(),q.GetEnd()]]
 left=min(v.x for v in body);right=max(v.x for v in body);bottom=max(v.y for v in body)
 assert min(left-x0-p.FromMM(.4),x1-right-p.FromMM(.4),y1-bottom-p.FromMM(.4))>=p.FromMM(10)
 rf=next(z for z in b.Zones() if z.GetIsRuleArea() and z.GetZoneName().startswith('Antenna:'))
 outline=rf.Outline().COutline(0);points=[outline.CPoint(i) for i in range(outline.PointCount())]
 rx0,ry0=min(v.x for v in points),min(v.y for v in points);rx1,ry1=max(v.x for v in points),max(v.y for v in points)
-for ref in ['J1','J2','J3','H1','H2']:
+for ref in ['J1','J2','J3','H1','H2','H3','H4']:
  points=[v for q in fs[ref].GraphicalItems() if q.GetLayer()==p.F_CrtYd for v in [q.GetStart(),q.GetEnd()]]
  cx0,cy0=min(v.x for v in points),min(v.y for v in points);cx1,cy1=max(v.x for v in points),max(v.y for v in points)
  distance=math.hypot(max(rx0-cx1,cx0-rx1,0),max(ry0-cy1,cy0-ry1,0))
@@ -46,13 +46,25 @@ assert len(list(fs['J3'].Pads()))==14
 print('Rectangular dimensions, fourteen-pin GPIO header and recommended RF clearances passed.')
 
 assert math.dist(tuple(fs['C2'].GetPosition()), tuple(u.GetPosition())) < math.dist(tuple(fs['C1'].GetPosition()), tuple(u.GetPosition()))
-for n,pos in enumerate([(3.5,46),(34.5,46)],1):
+for n,pos in enumerate([(3.5,46),(37,46),(3.5,3.5),(37,3.5)],1):
  f=fs['H'+str(n)];q=list(f.Pads());assert len(q)==1 and q[0].GetAttribute()==p.PAD_ATTRIB_NPTH
  assert tuple(round(p.ToMM(v),4) for v in f.GetPosition())==pos
  assert tuple(round(p.ToMM(v),4) for v in q[0].GetDrillSize())==(2.2,2.2)
-print('HF capacitor position and two unplated 2.2 mm mounting holes passed.')
+print('HF capacitor position and four unplated 2.2 mm mounting holes passed.')
 
 assert abs(fs["J1"].GetPosition().x-(x0+x1)/2)<2
 assert fs["SW1"].GetAttributes() & p.FP_DNP
 assert len(list(fs["SW1"].Pads()))==4
-print("USB plug centred; optional through-hole reset footprint verified.")
+print("USB-C socket centred; optional through-hole reset footprint verified.")
+
+# The USB-C socket reuses the checked original revision D land pattern.
+expected=p.FootprintLoad(str(root/'hardware/Breakout.pretty'),'USB_C_Receptacle_HRO_TYPE-C-31-M-12')
+def lands(fp):
+ return sorted((q.GetNumber(),tuple(q.GetFPRelativePosition()),tuple(q.GetSize()),tuple(q.GetDrillSize()),q.GetAttribute(),q.GetLocalSolderMaskMargin(),q.GetLocalSolderPasteMargin()) for q in fp.Pads())
+assert lands(fs['J1'])==lands(expected), 'USB-C land geometry differs from the checked footprint'
+for pad in fs['J1'].Pads():
+ if pad.GetNumber() in ['A8','B8']:assert pad.GetNetname().startswith('unconnected-'), 'SBU must be unconnected'
+for ref,net in [('R1','CC1'),('R2','CC2')]:
+ assert fs[ref].GetValue()=='5k1/1%'
+ assert d['parts'][ref]=={'1':net,'2':'GND'}
+print('USB-C land pattern, independent 5.1k CC pull-downs and unconnected SBU pads passed.')

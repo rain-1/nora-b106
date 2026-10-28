@@ -1,11 +1,11 @@
 # NORA-B106 board workspace
 
-**Latest design: [Dragon P3.1](square-p3/README.md), 38 × 49.5 mm, twelve GPIOs,
-SWD and centred optional through-hole USB-A.** This rectangular update keeps
-1.6 mm thickness and fits within a 50 × 50 mm tier. It adds an optional reset
-button, two bottom M2 holes, a white cyber dragon and the Codex / Backplane
+**Latest design: [Dragon P3.2](square-p3/README.md), 40.5 × 49.5 mm, twelve GPIOs,
+SWD and a centred optional USB-C socket.** This rectangular update keeps
+1.6 mm thickness and fits within a 50 × 50 mm tier. It has an optional reset
+button, four M2 holes, a white cyber dragon and the Codex / Backplane
 credit. Minimum assembly remains the module and two capacitors.
-Use its [current Gerber ZIP](square-p3/fabrication/nora-dragon-P3_1-gerbers.zip),
+Use its [current Gerber ZIP](square-p3/fabrication/nora-dragon-P3_2-gerbers.zip),
 [ordering/pinout guide](square-p3/hardware/README.md) and
 [small-stencil guidance](square-p3/hardware/STENCIL.md).
 It keeps P1's exact electrical pinout and uses the existing P1 USB firmware;

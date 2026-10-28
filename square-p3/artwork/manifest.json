@@ -2,9 +2,9 @@
   "layer": "B.Silkscreen",
   "regions": 35,
   "native_bounds_mm": [
-    8.392936119527757,
+    9.642936119527757,
     13.309678107528331,
-    29.605356081532502,
+    30.855356081532502,
     35.89450396699443
   ],
   "area_mm2": 174.51595957727903,
@@ -13,5 +13,10 @@
   "pad_mask_avoidance_mm": 0.25,
   "copper_and_soldermask_changed_for_art": false,
   "source": "cyber-dragon-source.png",
-  "vector": "cyber-dragon.svg"
+  "vector": "cyber-dragon.svg",
+  "board_mm": [
+    40.5,
+    49.5
+  ],
+  "revision": "P3.2"
 }

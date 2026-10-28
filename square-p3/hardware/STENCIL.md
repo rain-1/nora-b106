@@ -6,7 +6,7 @@ before reflow/hot-plate heating. Use the **F.Paste** artwork, not F.Mask.
 
 ## First choice: small frameless steel
 
-For this 38 × 49.5 mm board, start with a **100 × 100 mm custom frameless**
+For this 40.5 × 49.5 mm board, start with a **100 × 100 mm custom frameless**
 stainless stencil, top side only. This leaves at least about 25 mm of handling/taping
 margin around each edge. A **0.12 mm** thickness is a reasonable prototype
 starting point, not a u-blox guaranteed assembly specification; the paste and
@@ -61,4 +61,8 @@ is a poor starting point for an 82-pad hidden-land module.
 For printing paste, support the bare board flat, fix it against two edges,
 align/tape the stencil, squeegee once and lift it vertically. Inspect for missing
 or bridged deposits before placing parts. Reflow all SMD components in the
-module's permitted reflow process; iron-solder the USB plug/headers afterwards.
+module's permitted reflow process; iron-solder the USB-C shell anchors, headers and optional button afterwards.
+
+P3.2's stencil also includes the USB-C SMD contacts and both CC resistors.
+Use this revision's paste layer; the old USB-A stencil does not fit it. The
+through-hole shell anchors and button are not added as SMD paste apertures.

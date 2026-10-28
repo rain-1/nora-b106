@@ -5,7 +5,7 @@ The complete final generation prompt is in [PROMPT.md](PROMPT.md). No image edit
 or external CLI/API generation was used. The black source is a positive artwork
 mask; its positive shapes become white ink on the PCB.
 
-`cyber-dragon.svg` is the cleaned vector master in a 38 × 49.5 mm back-view frame.
+`cyber-dragon.svg` is the cleaned vector master in a 40.5 × 49.5 mm back-view frame.
 `cyber-dragon.geometry.json` records its polygon geometry. The PCB contains
 35 native polygons grouped as **Cyber dragon - back silkscreen**, mirrored into
 native board coordinates so the finished back view reads as intended. Holes in
@@ -22,3 +22,6 @@ The art and credit are printed in the board's normal white back silkscreen.
 The routed native PCB is authoritative; operation scripts under ignored build/
 are not a full-board regeneration workflow. Edit the grouped graphic in KiCad
 for later artwork changes and regenerate/check the manufacturing files.
+
+P3.2 translates the existing art to the wider board centre; the generated
+source PNG and generation prompt are unchanged. No new image generation was used.

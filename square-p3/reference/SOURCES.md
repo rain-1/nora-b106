@@ -31,7 +31,7 @@
 
 The CAD checks do not establish physical operation. USB firmware and the Pico
 programming combination remain untested. The module symbol and 82-pad land
-pattern were reused from the checked revision D project; the Dragon P3.1 layout is updated. Initial P1 was Backplane-assisted; P3.1 uses native
+pattern were reused from the checked revision D project; the Dragon P3.2 layout is updated. Initial P1 was Backplane-assisted; P3.2 uses native
 KiCad edits and the KiCad Python API.
 
 Stencil ordering references are linked in hardware/STENCIL.md.
@@ -41,3 +41,14 @@ in ../minimal-p1/firmware/; the P3 compatibility check verifies them.
 The optional SW_Push symbol and SW_PUSH_6mm footprint come from the installed
 KiCad libraries, with their existing licence notices retained in hardware/.
 Cyber dragon generation details and vector import constraints are in artwork/.
+
+USB-C uses the same checked HRO TYPE-C-31-M-12 land pattern as revision D:
+- Manufacturer drawing, 2020-12-08, via LCSC C165948:
+  https://www.lcsc.com/datasheet/C165948.pdf
+- HRO drawing referenced by the KiCad footprint:
+  http://www.krhro.com/uploads/soft/180320/1-1P320120243.pdf
+- ST AN5225, CC pull-downs and USB Type-C device/sink pin mapping:
+  https://www.st.com/resource/en/application_note/dm00536349.pdf
+The USB-C land/pad geometry is independently audited against the local checked
+footprint. Its F.Silkscreen was removed in the original snapshot; pads, paste,
+mask, drill, body and courtyard geometry remain unchanged.

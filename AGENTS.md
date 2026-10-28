@@ -36,18 +36,21 @@ the ground and RF constraints. J2 remains the five-pin SWD header; J3 is now
 six pins: 3V3, GND, P0.24, P1.06, P0.20, P0.07/AIN3. Use P2 firmware only;
 USB IDs and the development signing key differ from P1. Hardware remains untested.
 
-Current Dragon P3.1 is under `square-p3/`, 38 x 49.5 mm, 1.6 mm FR4, 2 layers,
-1 oz; the former square P3 is in Git history. It has twelve GPIOs and P1's exact
+Current Dragon P3.2 is under `square-p3/`, 40.5 x 49.5 mm, 1.6 mm FR4, 2 layers,
+1 oz; older P3/P3.1 layouts are in Git history. It has twelve GPIOs and P1's exact
 J2/J3 electrical pinout. It deliberately
 uses the unchanged firmware under `minimal-p1/firmware/`; do not use P2 firmware.
 Read P3's hardware/programming guides before edits. Its routed native KiCad 9
 PCB is authoritative. `make -C square-p3 fabrication` checks ERC, DRC/parity,
 ground/RF/82-pad geometry, mounting holes and shared-firmware compatibility,
 runs the eight uploader tests, then exports Gerbers/paste/both drill files.
-`firmware-check` checks the shared P1 artifacts without rebuilding them. H1/H2
-are board-only optional M2 holes at the bottom. SW1 is an optional through-hole
+`firmware-check` checks the shared P1 artifacts without rebuilding them. H1-H4
+are four board-only optional M2 holes. SW1 is an optional through-hole
 reset switch, marked DNP; omitting it leaves the minimum assembly unchanged.
-USB is centred at x=19 mm. The grouped cyber dragon and signature are back
+USB-C is HRO TYPE-C-31-M-12, centred at x=20.25 mm. R1 and R2 are separate
+5.1k CC1/CC2 pull-downs and mandatory for USB. SBU pins are unconnected. The
+connector data/VBUS/module interfaces remain compatible with P1 firmware.
+The grouped cyber dragon and signature are back
 silkscreen only, with no decorative mask openings or copper. Artwork source,
 vectors and prompt are under artwork/. The RF/ground keepouts are retained.
 Hardware remains untested.

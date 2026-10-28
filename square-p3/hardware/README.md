@@ -9,17 +9,19 @@
 | C2 | 100 nF, 16 V, X7R, 0805 | Fit | Fit |
 | J2 | 1×5, 2.54 mm header | Optional/wires | Optional/wires |
 | J3 | 1×14, 2.54 mm header | Optional/wires | Optional/wires |
-| J1 | Same Sky UP2-AH-1-TH USB-A plug | Omit | Fit |
+| J1 | HRO TYPE-C-31-M-12 USB-C receptacle | Omit | Fit |
 | U2 | XC6206P332MR-G, 3.3 V, SOT-23-3 | Omit | Fit |
 | U3 | USBLC6-2SC6, SOT-23-6 | Omit | Fit |
 | C3, C4 | 1 µF, 16 V, X7R, 0805 | Omit | Fit both |
 | JP1 | Open solder bridge, no purchased part | Leave open | Bridge for USB power |
+| R1, R2 | 5.1 kΩ, 1%, 0805; one per CC pin | Omit both | Fit both |
 | SW1 | Normally-open 6 mm through-hole reset button | Optional | Optional |
 
 C3 bypasses USB 5 V; C4 is the regulator output capacitor and remains connected
 with JP1 open. C1/C2 decouple the target's separate 3.3 V rail. Choose capacitors
-with adequate effective capacitance at operating voltage. The connector and
-headers can be iron-soldered after reflow; the module's hidden pads cannot.
+with adequate effective capacitance at operating voltage. Reflow the USB-C SMD contacts with the module and other SMD parts. Its shell
+anchors, headers and optional switch can be iron-soldered afterwards. The
+module's hidden pads cannot be assembled with an ordinary iron alone.
 
 ## Power
 
@@ -27,7 +29,8 @@ For SWD-only use, leave JP1 open and supply J2 pin 1 from an external regulated
 3.3 V source (for example a debugger Pico's 3V3 OUT). Never use Pico VBUS/VSYS.
 The module's VDD and VDDH pins all share 3.3 V, selecting normal-voltage mode.
 
-For USB power, fit the complete USB group, bridge JP1, and disconnect the
+For USB power, fit the complete USB group **including both CC resistors**,
+bridge JP1, and disconnect the
 external 3.3 V supply, including Pico 3V3 OUT. Keep debugger ground connected.
 J2 pin 1 then supplies a target voltage reference/measurement point. Do not tie
 two supplies together. If deliberately powering externally with the USB parts
@@ -35,8 +38,11 @@ fitted, keep JP1 open to isolate the regulator output. The board does not select
 or OR supplies automatically. Never inject 5 V on a header or GPIO.
 
 VBUS connects to the module's dedicated B9 pin, U2 input and U3 supply only.
-Begin below about 100 mA total target/header load and verify regulator temperature;
-the family maximum current is not a guaranteed usable GPIO power budget.
+Begin below about 100 mA total target/header load and verify regulator temperature.
+The built bootloader/application each advertise 100 mA (bMaxPower=50 in 2 mA
+units). USB-C does not increase this budget: the fixed CC pull-downs do not
+detect or negotiate higher current, and regulator maximum current is not a
+guaranteed usable GPIO power budget.
 
 ## Pinouts
 
@@ -74,9 +80,9 @@ GPIO headers. Use P1 firmware; SWO and the remaining GPIOs are not exposed.
 
 ## JLCPCB settings
 
-Use `fabrication/nora-dragon-P3_1-gerbers.zip`:
+Use `fabrication/nora-dragon-P3_2-gerbers.zip`:
 
-- 2 layers, FR4, **38 × 49.5 mm, 1.6 mm thickness**, 1 oz copper.
+- 2 layers, FR4, **40.5 × 49.5 mm, 1.6 mm thickness**, 1 oz copper.
 - Standard plated vias, green mask, white silk. No assembly service.
 - Lead-free HASL is the low-cost starting finish; ENIG is optional.
 - No gold fingers, edge chamfer, controlled impedance or via filling.
@@ -104,7 +110,7 @@ Do not substitute the old revision D's 0.8 mm order setting.
    Remove power before fitting U1.
 3. Reflow U1, including the six antenna-end ground pads. Follow the module's
    moisture/reflow instructions, especially for modules stored open.
-4. Fit headers or wires and any optional through-hole connector. Keep tall
+4. Fit headers or wires and the four USB-C shell anchors (if fitted). Keep tall
    objects and metal at least 10 mm away from the antenna.
 5. Recheck supply voltage and shorts; connect SWD ground first. Start with short
    wires and SWD at 1 MHz or slower. Follow `programming/README.md`.
@@ -132,24 +138,54 @@ The board is not a USB compliance-tested product.
 
 ## Mounting, reset and size tier
 
-Two 2.2 mm unplated holes suit optional M2 hardware. Centres are (3.5, 46) and
-(34.5, 46) mm from the top-left corner in the component-side view. Use small
-heads/spacers within the footprint courtyards. The former top holes were removed
-to keep mounting metal clear of the antenna on the narrower board.
+Four 2.2 mm unplated holes suit optional M2 hardware. In the component-side
+view, with the origin at the top-left:
+
+| Hole | Centre (mm) |
+|---|---|
+| H1 | (3.5, 46) |
+| H2 | (37, 46) |
+| H3 | (3.5, 3.5) |
+| H4 | (37, 3.5) |
+
+Use M2 heads/spacers that fit inside the 4.4 mm footprint courtyards. The top
+holes retain at least 10 mm of courtyard-to-antenna separation; oversized metal
+washers or spacers would consume that clearance. Mounting is optional and has
+no electrical connection.
 
 SW1 is optional: a normally-open 6 mm through-hole pushbutton with 6.5 mm
 spacing across its paired legs and 4.5 mm spacing between rows. Check the
 purchased switch against `Breakout:SW_PUSH_6mm`. It grounds RESET_N while held;
 release it to restart into the P1 firmware's USB recovery mode. No external
 pull-up or capacitor is added; reset retains the module's internal pull-up.
-Iron-solder this button, headers and USB plug after SMD reflow. Omit SW1 to keep
+Iron-solder this button, headers and USB-C shell anchors after SMD reflow. Omit SW1 to keep
 the minimum assembly unchanged. The firmware guide describes normal power-on
 recovery timeout versus a RESET_N reset.
 
-The rectangular outline is 38 × 49.5 mm; board thickness remains 1.6 mm. The
-USB plug body is centred at x=19 mm. Use the actual outline dimensions in a
+The rectangular outline is 40.5 × 49.5 mm; board thickness remains 1.6 mm. The
+USB-C socket body is centred at x=20.25 mm. Use the actual outline dimensions in a
 quote. This still fits a 50 mm square tier and does not lower its base price.
 
 The dragon and credit are white **B.Silkscreen** ink. No decorative copper or
 mask cutouts are added. Green mask/white silk is the default low-cost choice;
 other mask colours change the background of the same single-colour art.
+
+## USB-C assembly details
+
+Fit the exact **HRO TYPE-C-31-M-12** footprint, also identified as LCSC C165948.
+A similar-looking USB-C socket may have a different land pattern. This connector
+has 0.5 mm-pitch SMD signal contacts, four plated shell-anchor slots, and two
+0.65 mm non-plated locating holes. Use the new paste file and keep both drill
+files in the manufacturing ZIP. The socket lip overhangs the PCB by about
+0.35 mm; the socket origin is (20.25, 46.2) mm. Its body no longer projects like
+the old USB-A plug.
+
+R1 connects **CC1 to GND** and R2 connects **CC2 to GND**, each 5.1 kΩ, 1%.
+Do not join the CC pins together or omit one resistor for a USB build. Both
+D+ contacts share USB_DP; both D− contacts share USB_DM. SBU1/SBU2 are unused.
+The shell is connected to ground. No USB-PD/high-voltage circuit is present;
+USB is for 5 V power, USB full-speed data and the installed recovery firmware.
+
+The optional switch is through-hole; the USB-C contacts and CC resistors are
+SMD and should be reflowed. Inspect the connector joints before powering the
+board. Use a data-capable cable; a charger alone cannot upload firmware.

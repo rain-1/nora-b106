@@ -22,7 +22,7 @@
   "factory_hex_sha256": "be8f139b5782e9e1374068cf3fce0bad37783c488c47cb6c15e8369af5c2d1ea",
   "usb_update_sha256": "7e75c3798b40fb572f97252f22a2cdc101502dbccee038fd1f573441a37c70f3",
   "checks": [
-    "P3/P1 electrical parts, module assignments and both headers match",
+    "Core circuit, module assignments and headers match P1; USB-C mapping and CC pull-downs verified",
     "All shared firmware sources and artifacts match the validated P1 manifest",
     "Resolved twelve-GPIO mapping matches the validated image report",
     "Eight host uploader tests passed"

@@ -4,9 +4,11 @@ C1,4.7uF 10V X7R,0805,1,required,required
 C2,100nF 16V X7R,0805,1,required,required
 J2,1x5 2.54mm header,THT,1,optional / wires,optional / wires
 J3,1x14 2.54mm header,THT,1,optional / wires,optional / wires
-J1,Same Sky UP2-AH-1-TH,exact custom THT pattern,1,omit,required
+J1,HRO TYPE-C-31-M-12 (LCSC C165948),USB-C SMD + through-hole shell,1,omit,required
 U2,XC6206P332MR-G,SOT-23-3,1,omit,required
 U3,USBLC6-2SC6,SOT-23-6,1,omit,required
 C3 C4,1uF 16V X7R,0805,2,omit,required
 JP1,Solder bridge,no purchased part,0,open,closed for USB power
 SW1,RESET normally-open 6mm (optional),Breakout:SW_PUSH_6mm,1,optional,optional
+R1,5.1k 1%,0805,1,omit,required
+R2,5.1k 1%,0805,1,omit,required
