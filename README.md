@@ -1,5 +1,17 @@
 # NORA-B106 board workspace
 
+**Latest design: [Square P3](square-p3/README.md), 49.5 × 49.5 mm, twelve GPIOs,
+SWD and optional through-hole USB-A.** It fits within a 50 × 50 mm tier and adds
+four optional M2 mounting holes, more working space and the requested Codex /
+Backplane signature. Minimum assembly remains the module and two capacitors.
+Use its [Gerber ZIP](square-p3/fabrication/nora-square-P3-gerbers.zip),
+[ordering/pinout guide](square-p3/hardware/README.md) and
+[small-stencil guidance](square-p3/hardware/STENCIL.md).
+It keeps P1's exact electrical pinout and uses the existing P1 USB firmware;
+see the [P3 programming guide](square-p3/programming/README.md).
+CAD and static firmware compatibility checks pass; hardware remains untested.
+Run `make -C square-p3 fabrication` for validation and exports.
+
 **Latest compact design: [Compact P2](minimal-p2/README.md), 31.5 × 27.5 mm,
 four GPIOs, SWD and optional through-hole USB-A.** This uses 35% less PCB area
 than Minimal P1, with the same minimum assembly of the module and two capacitors.

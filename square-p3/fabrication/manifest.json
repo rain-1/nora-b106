@@ -1,0 +1,33 @@
+{
+  "revision": "P3",
+  "board_mm": [
+    49.5,
+    49.5
+  ],
+  "thickness_mm": 1.6,
+  "layers": 2,
+  "copper_oz": 1,
+  "export_source": "KiCad 9 Square P3 working project, derived from Backplane-assisted Minimal P1",
+  "status": "CAD validation passed; no physical prototype or programming test",
+  "sha256": {
+    "nora-minimal.kicad_pcb": "4281c31c7bbd87134a63e724a21b29c92ff41114293ba44df6321f411646f5c5",
+    "nora-minimal.kicad_sch": "13eaabdcc2ea761010a1aa4fabb58e6523561a350a619c7b12b695dabbb593ff",
+    "nora-minimal.kicad_pro": "d336fa0885c9d2d4fce43fee89d6d9e2c04826aaea47288248e54ea7a611f49a",
+    "hardware/BOM.csv": "bb50ea872208ad12d8b75d9fa975935531ad3890ec5d715e08f414f51c4e2785",
+    "design.json": "d41eb9c953c59ebc02cfdd52372361a36418a077972c056521107095434b215c"
+  },
+  "gerber_zip_sha256": "0b03bea3c8fd41524e7fc7849dcffa3db5cfe2570295f86545f177efc405612c",
+  "gerber_sha256": {
+    "nora-minimal-B_Cu.gbl": "ad14307c7ba40ed4e8e696bbe2052d2b6c54c06f75b39648d3ae6df6c4b3069a",
+    "nora-minimal-B_Mask.gbs": "7231dc5a4d70d0cfff355c9a757a2c07fc3433cb603af07c02544b53e912a278",
+    "nora-minimal-B_Silkscreen.gbo": "d994daed6586154320d5660800fa50e0c071d0aba3c0a736644a35b899a149f0",
+    "nora-minimal-Edge_Cuts.gm1": "12dc6f0e12687f01919bf9682666694f4d99a447bc10e6265bd9f4bfc2859363",
+    "nora-minimal-F_Cu.gtl": "c2c0bef4d69d95a416a819148b798e71ce45cc33dc001129f6a718b56d23713f",
+    "nora-minimal-F_Mask.gts": "8a7d55f179f86b76c707f9bf362c38a96b7ef86e72f4ca554272525892920b56",
+    "nora-minimal-F_Paste.gtp": "0f949265f8ad05db630132ec0fe39c26c29fb8c498c71d6200ceeae238dac383",
+    "nora-minimal-F_Silkscreen.gto": "9d211aeebde6d8efe1136f1acffae5e760235f2f1c57d40fab55bf7416751633",
+    "nora-minimal-NPTH.drl": "45bdb7b34947ca0731591a16c5d6bf137b0c0b13f60d1d894d08db130dbd48bf",
+    "nora-minimal-PTH.drl": "b18854860242a4ba7798d82688e77369cc512a0dab34c33ef3bea6f7e28498f3",
+    "nora-minimal-job.gbrjob": "18098965c26e5068870276287e424c1a495a67004998a99858feebb829b63813"
+  }
+}

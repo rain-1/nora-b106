@@ -35,3 +35,14 @@ Order settings are 2 layers, 31.5 x 27.5 mm, 1.6 mm FR4, 1 oz copper. It retains
 the ground and RF constraints. J2 remains the five-pin SWD header; J3 is now
 six pins: 3V3, GND, P0.24, P1.06, P0.20, P0.07/AIN3. Use P2 firmware only;
 USB IDs and the development signing key differ from P1. Hardware remains untested.
+
+Square P3 is under `square-p3/`, 49.5 x 49.5 mm, 1.6 mm FR4, 2 layers, 1 oz.
+It restores P1's twelve GPIOs and exact J2/J3 electrical pinout. It deliberately
+uses the unchanged firmware under `minimal-p1/firmware/`; do not use P2 firmware.
+Read P3's hardware/programming guides before edits. Its routed native KiCad 9
+PCB is authoritative. `make -C square-p3 fabrication` checks ERC, DRC/parity,
+ground/RF/82-pad geometry, mounting holes and shared-firmware compatibility,
+runs the eight uploader tests, then exports Gerbers/paste/both drill files.
+`firmware-check` checks the shared P1 artifacts without rebuilding them. H1-H4
+are board-only optional M2 holes, not electronic BOM parts. Signature is back
+silkscreen only; the RF/ground keepouts are retained. Hardware remains untested.

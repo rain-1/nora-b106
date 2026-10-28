@@ -1,0 +1,8 @@
+*.lck
+*.kicad_prl
+~*.lck
+*-backups/
+analysis/
+__pycache__/
+build/
+firmware/host-tools/linux-amd64/mcumgr

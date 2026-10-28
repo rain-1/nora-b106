@@ -1,0 +1,30 @@
+{
+  "result": "passed",
+  "hardware_tested": false,
+  "firmware": "../minimal-p1/firmware",
+  "app_version": "1.0.0+0",
+  "gpio_header": {
+    "1": "+3V3",
+    "2": "GND",
+    "3": "P0.24",
+    "4": "P1.06",
+    "5": "P0.17",
+    "6": "P0.18",
+    "7": "P0.15",
+    "8": "P0.10",
+    "9": "P0.08",
+    "10": "P0.12",
+    "11": "P1.03",
+    "12": "P1.00",
+    "13": "P0.20",
+    "14": "P0.07_AIN3"
+  },
+  "factory_hex_sha256": "be8f139b5782e9e1374068cf3fce0bad37783c488c47cb6c15e8369af5c2d1ea",
+  "usb_update_sha256": "7e75c3798b40fb572f97252f22a2cdc101502dbccee038fd1f573441a37c70f3",
+  "checks": [
+    "P3/P1 electrical parts, module assignments and both headers match",
+    "All shared firmware sources and artifacts match the validated P1 manifest",
+    "Resolved twelve-GPIO mapping matches the validated image report",
+    "Eight host uploader tests passed"
+  ]
+}
