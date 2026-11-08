@@ -19,6 +19,8 @@ reset wire. It adds no required components.
 - [Top paste stencil Gerber](fabrication/gerbers/nora-minimal-F_Paste.gtp)
 - [Small frameless stencil options](hardware/STENCIL.md)
 - [Pico/SWD and USB installation](programming/README.md)
+- [Flash the next minimum board with the Pico](programming/NEXT_BOARD.md)
+- [Signed Bluetooth application updates](firmware/ble-ota/README.md)
 - [BOM](hardware/BOM.csv) and [validation](verification.md)
 
 USB uses the **HRO TYPE-C-31-M-12** sixteen-contact USB 2.0 receptacle. Its
@@ -48,6 +50,11 @@ Open `nora-minimal.kicad_pro` with its local libraries. Run `make check`,
 mapping, separate CC pull-downs, unchanged firmware-facing interfaces and shared
 P1 artifact hashes, plus eight uploader tests. No firmware rebuild is required.
 
-CAD/static checks pass. **No PCB assembly, paste transfer, SWD/USB, GPIO/ADC
-or RF performance has been physically tested.** Older P3/P3.1 files are in Git
-history; current order files use **P3.2**. P1/P2/revision D remain separate.
+CAD/static checks pass. One minimum U1/C1/C2 assembly has now passed 3.3 V,
+Pico 2 W SWD, external LED, standalone firmware and UART-console tests,
+including a power cycle. Separate [Bluetooth bring-up firmware](firmware/ble/README.md)
+has started its host/controller, and the user confirmed seeing
+`NORA Dragon D25D` in a Bluetooth scanner. RF range/performance, USB and ADC
+remain untested. See the
+[physical bring-up record](programming/BRINGUP.md). Older P3/P3.1 files are in
+Git history; current order files use **P3.2**. P1/P2/revision D remain separate.

@@ -1,7 +1,9 @@
 # First tests: Dragon P3.2 (P1-compatible pinout)
 
-This is a low-cost CMSIS-DAP route to try, **not a hardware-tested combination
-in this project**. The NORA-B106 uses a dual-core nRF5340; use software with
+This low-cost CMSIS-DAP route has now passed basic SWD, LED, flash and UART
+tests on one minimum assembly with a Pico 2 W. See [the bring-up record](BRINGUP.md)
+and [separate BLE firmware](../firmware/ble/README.md). USB is still untested.
+The NORA-B106 uses a dual-core nRF5340; use software with
 nRF53 support, not an nRF52 target file. The manufacturer's documented supported
 programmer route is SEGGER J-Link. Keep that as a fallback if your particular
 Pico firmware/tool version cannot attach or recover this device.

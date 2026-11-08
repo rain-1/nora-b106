@@ -1,0 +1,6 @@
+board:
+  name: nora_dragon
+  full_name: NORA-B106 Dragon P3 BLE bring-up
+  vendor: others
+  socs:
+    - name: nrf5340

@@ -1,0 +1,8 @@
+LCSC Part Number,Quantity,Designator,Manufacturer Part Number,Description
+C165948,5,J1,TYPE-C-31-M-12,HRO exact USB-C receptacle - two required plus spares
+C5446,5,U2,XC6206P332MR-G,Torex 3.3V regulator SOT-23-3 - two required plus spares
+C7519,10,U3,USBLC6-2SC6,ST USB ESD protection SOT-23-6 - two required plus spares
+C28323,20,C3 C4,CL21B105KBFNNNE,Samsung 1uF 50V X7R 0805 - four required; higher voltage rating than BOM
+C84375,100,R1 R2,RC0805FR-075K1L,Yageo 5.1k 1 percent 0805 - four required; supplier pack quantity
+C93157,5,SW1,B3F-1000,Optional 6mm normally-open reset switch - two required if fitted
+C2977586,5,J2 J3,2.54-1*40,Optional straight single-row 40-pin 2.54mm male strip - cut to 5 and 14 pins per board

@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.20.0)
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+project(nora_dragon_ble_ota)
+if(NOT DEFINED NORA_FIRMWARE_VERSION)
+  message(FATAL_ERROR "Build with ble-ota/build.py so runtime and signed versions match")
+endif()
+target_sources(app PRIVATE ../../ble/app/src/main.c ../../ble/app/src/led_service.c src/ota_commands.c)
+target_compile_definitions(app PRIVATE NORA_FIRMWARE_VERSION="${NORA_FIRMWARE_VERSION}")
